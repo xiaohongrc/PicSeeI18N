@@ -3,6 +3,7 @@ package com.hongenit.picseei18n.picClassify
 import com.hongenit.picseei18n.PicSeeApplication
 import com.hongenit.picseei18n.net.RequestUrl
 import com.hongenit.picseei18n.net.WebServiceImpl
+import com.hongenit.picseei18n.util.LogUtil
 import com.hongenit.picseei18n.util.ToastUtil
 
 /**
@@ -43,7 +44,7 @@ class ClassifyModel() {
             }
 
             override fun onAnalyzeError() {
-                ToastUtil.showToast("get classify data error")
+                LogUtil.e("ClassifyModel","get classify data error")
             }
 
         })
