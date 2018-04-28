@@ -28,7 +28,7 @@ class ImageLoadUtil {
 
 //    val requestOptions = RequestOptions().placeholder(R.drawable.default_img).error(R.drawable.default_img)
 
-    fun loadImage(context: Context, imageView: ImageView, imgUrl: String) {
+    fun loadImage(context: Context, imageView: ImageView, imgUrl: String?) {
         val crossFade = DrawableTransitionOptions().crossFade(100)
         Glide.with(context).load(imgUrl).transition(crossFade).into(imageView)
     }

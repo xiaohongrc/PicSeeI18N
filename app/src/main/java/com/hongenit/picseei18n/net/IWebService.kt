@@ -11,7 +11,7 @@ interface IWebService {
 
 
     //    获取分类下的图集列表
-    fun getAlbumInfoList()
+    fun getAlbumInfoList(url :String ,listener:ResponseListener)
 
 
 }

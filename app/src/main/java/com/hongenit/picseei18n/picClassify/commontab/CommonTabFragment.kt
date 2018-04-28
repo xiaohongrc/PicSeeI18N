@@ -14,6 +14,7 @@ import com.hongenit.picseei18n.util.ImageLoadUtil
 import kotlinx.android.synthetic.main.fragment_common_tab.*
 import kotlinx.android.synthetic.main.item_common_main.view.*
 import com.hongenit.picseei18n.detail.DetailsActivity
+import com.hongenit.picseei18n.net.RequestUrl
 import java.util.*
 
 /**
@@ -92,7 +93,7 @@ class CommonTabFragment : BaseFragment() {
     private lateinit var mUrl: String
 
     override fun initParams() {
-        mUrl = arguments.getString(KEY_ARGUMENTS_URL)
+        mUrl = RequestUrl.ALBUM_INFO_LIST+"?whichClassify="+arguments.getString(KEY_ARGUMENTS_URL)
     }
 
 
@@ -106,9 +107,9 @@ class CommonTabFragment : BaseFragment() {
         private fun forwardDetailActivity(pos: Int) {
             val picBean = mPicList[pos]
             val intent = Intent(context, DetailsActivity::class.java)
-            intent.putExtra(KEY_ARGUMENTS_URL, picBean.detailLink)
+            intent.putExtra(KEY_ARGUMENTS_URL, picBean.albumUrl)
             EventUtil.tab_url_click(mUrl)
-            EventUtil.detail_url_click(picBean.detailLink)
+            EventUtil.detail_url_click(picBean.albumUrl)
 
             context.startActivity(intent)
         }
@@ -133,7 +134,7 @@ class CommonTabFragment : BaseFragment() {
             layoutParams.height = (minHeight + Math.random() * heightSpace).toInt()
             homeViewHolder.itemView.layoutParams = layoutParams
             var picBean = mPicList[position]
-            ImageLoadUtil.newInstance()?.loadImage(context, homeViewHolder.itemView.ivGirlImage, picBean.url)
+            ImageLoadUtil.newInstance()?.loadImage(context, homeViewHolder.itemView.ivGirlImage, picBean.thumbnailUrl)
             homeViewHolder.itemView.tvImageTitle.text = picBean.title
         }
 
