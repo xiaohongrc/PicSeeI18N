@@ -6,4 +6,18 @@
     <string name="load_detail_error">获取图集失败</string>
     <string name="load_image_error">加载图片失败</string>
     <string name="no_more_data">没有更多数据了</string>
+
+
+    <string name="classify_mingxing">明星</string>
+    <string name="classify_meinv">美女</string>
+    <string name="classify_fengjing">风景</string>
+    <string name="classify_qiche">汽车</string>
+    <string name="classify_dongman">动漫</string>
+    <string name="classify_dongwu">动物</string>
+    <string name="classify_zhiwu">植物</string>
+    <string name="classify_tiyu">体育</string>
+    <string name="classify_meishi">美食</string>
+    <string name="classify_others">其它</string>
+
+
 </resources>
