@@ -12,7 +12,6 @@ import kotlinx.android.synthetic.main.fragment_area_classify.*
 class StyleClassifyFragment : BaseFragment() {
 
     companion object {
-
         fun newInstance(): StyleClassifyFragment {
             val fragment = StyleClassifyFragment()
             return fragment
@@ -27,30 +26,30 @@ class StyleClassifyFragment : BaseFragment() {
 
     override fun initView() {
 
-        mvpAdapter = AreaVpAdapter(childFragmentManager)
+        mvpAdapter = AreaVpAdapter(context,childFragmentManager)
         vpArea.adapter = mvpAdapter
         tabLayout.setupWithViewPager(vpArea)
         tabLayout.tabMode = TabLayout.MODE_SCROLLABLE
     }
 
-    private lateinit var mPresenter: ClassifyPresenter
+//    private lateinit var mPresenter: ClassifyPresenter
 
     override fun initData() {
-        mPresenter = ClassifyPresenter(this)
-        mPresenter.requestClassifyData()
+//        mPresenter = ClassifyPresenter(this)
+//        mPresenter.requestClassifyData()
 
 
     }
 
-    fun RefreshData(result: ArrayList<ClassifyTypeBean>) {
-        mvpAdapter.setData(result)
-        for (item in result){
-            println(item)
-
-        }
-        mvpAdapter.notifyDataSetChanged()
-
-    }
+//    fun RefreshData(result: ArrayList<ClassifyTypeBean>) {
+//        mvpAdapter.setData(result)
+//        for (item in result){
+//            println(item)
+//
+//        }
+//        mvpAdapter.notifyDataSetChanged()
+//
+//    }
 
 
 

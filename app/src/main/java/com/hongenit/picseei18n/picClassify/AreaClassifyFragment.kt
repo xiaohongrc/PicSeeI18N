@@ -26,7 +26,7 @@ class AreaClassifyFragment : BaseFragment() {
     }
 
     override fun initView() {
-        vpArea.adapter = AreaVpAdapter(childFragmentManager)
+        vpArea.adapter = AreaVpAdapter(context,childFragmentManager)
 
         tabLayout.setupWithViewPager(vpArea)
         tabLayout.tabMode = TabLayout.MODE_SCROLLABLE

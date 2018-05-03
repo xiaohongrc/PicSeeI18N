@@ -17,7 +17,7 @@
     <string name="classify_zhiwu">植物</string>
     <string name="classify_tiyu">体育</string>
     <string name="classify_meishi">美食</string>
-    <string name="classify_others">其它</string>
+    <!--<string name="classify_others">其它</string>-->
 
 
 </resources>

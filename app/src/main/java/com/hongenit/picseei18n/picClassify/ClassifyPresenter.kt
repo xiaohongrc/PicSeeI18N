@@ -12,7 +12,7 @@ class ClassifyPresenter(styleClassifyFragment: StyleClassifyFragment) {
     fun requestDataComplete(result: ArrayList<ClassifyTypeBean>) {
         println("requestDataComplete")
 
-        mView.RefreshData(result)
+//        mView.RefreshData(result)
 
 
 

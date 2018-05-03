@@ -7,6 +7,7 @@ import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AbsListView
 import com.hongenit.picseei18n.BaseActivity
 import com.hongenit.picseei18n.R
 import com.hongenit.picseei18n.picClassify.commontab.KEY_ARGUMENTS_PHOTOS
@@ -36,7 +37,7 @@ class DetailsActivity : BaseActivity() {
 //
 //    }
 
-//    private var mUrl= ArrayList<String>()
+    //    private var mUrl= ArrayList<String>()
     fun initParams() {
         mPicList = intent.getStringArrayListExtra(KEY_ARGUMENTS_PHOTOS)
     }
@@ -64,8 +65,17 @@ class DetailsActivity : BaseActivity() {
         mCardScaleHelper = CardScaleHelper()
         mCardScaleHelper.setCurrentItemPos(0)
         mCardScaleHelper.attachToRecyclerView(speedRecyclerView)
+        speedRecyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+            override fun onScrollStateChanged(recyclerView: RecyclerView?, newState: Int) {
+                super.onScrollStateChanged(recyclerView, newState)
+                when (newState) {
+                    RecyclerView.SCROLL_STATE_IDLE -> loadingView.alpha = 1f
+                    RecyclerView.SCROLL_STATE_DRAGGING -> loadingView.alpha = 0f
+                    RecyclerView.SCROLL_STATE_SETTLING -> loadingView.alpha = 0f
+                }
+            }
+        })
 
-//        initBlurBackground()
     }
 
     fun initData() {
