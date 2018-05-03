@@ -23,7 +23,7 @@ import java.util.*
  */
 
 // url
-const val KEY_ARGUMENTS_URL: String = "KEY_ARGUMENTS_URL"
+const val KEY_ARGUMENTS_PHOTOS: String = "KEY_ARGUMENTS_URL"
 
 const val KEY_ARGUMENTS_URL_TYPE: String = "KEY_ARGUMENTS_URL_TYPE"
 
@@ -35,7 +35,7 @@ class CommonTabFragment : BaseFragment() {
         fun getInstance(title: String): CommonTabFragment? {
             val fragment = CommonTabFragment()
             val bundle = Bundle()
-            bundle.putString(KEY_ARGUMENTS_URL, title)
+            bundle.putString(KEY_ARGUMENTS_PHOTOS, title)
             fragment.arguments = bundle
             return fragment
         }
@@ -87,13 +87,14 @@ class CommonTabFragment : BaseFragment() {
     override fun initData() {
         srlLayout.isRefreshing = true
         mPresenter.start(mUrl)
+        println("mUrl = "+mUrl)
     }
 
 
     private lateinit var mUrl: String
 
     override fun initParams() {
-        mUrl = RequestUrl.ALBUM_INFO_LIST+"?whichClassify="+arguments.getString(KEY_ARGUMENTS_URL)
+        mUrl = RequestUrl.ALBUM_INFO_LIST+"?whichClassify="+arguments.getString(KEY_ARGUMENTS_PHOTOS)
     }
 
 
@@ -101,16 +102,14 @@ class CommonTabFragment : BaseFragment() {
         override fun onClick(v: View?) {
             val pos = v?.getTag() as Int
             forwardDetailActivity(pos)
-
         }
 
         private fun forwardDetailActivity(pos: Int) {
             val picBean = mPicList[pos]
             val intent = Intent(context, DetailsActivity::class.java)
-            intent.putExtra(KEY_ARGUMENTS_URL, picBean.albumUrl)
+            intent.putExtra(KEY_ARGUMENTS_PHOTOS, picBean.albumPhotoList)
             EventUtil.tab_url_click(mUrl)
             EventUtil.detail_url_click(picBean.albumUrl)
-
             context.startActivity(intent)
         }
 

@@ -13,6 +13,7 @@ import org.json.JSONArray
  */
 abstract class CommonTabResponsListener : ResponseListener() {
     override fun onComplete(p1: Response?) {
+        println("onComplete currenttime = " + System.currentTimeMillis())
         onAnalyzeComplete(AnalyzeResposeData(p1))
     }
 
@@ -27,18 +28,6 @@ abstract class CommonTabResponsListener : ResponseListener() {
 //        "photoUrl": "http://pic1.win4000.com/mobile/2018-04-04/5ac4789c99128.jpg"
 //    }, {
 //        "photoUrl": "http://pic1.win4000.com/mobile/2018-04-04/5ac4789d94f7a.jpg"
-//    }, {
-//        "photoUrl": "http://pic1.win4000.com/mobile/2018-04-04/5ac4789ea9459.jpg"
-//    }, {
-//        "photoUrl": "http://pic1.win4000.com/mobile/2018-04-04/5ac4789fb30ce.jpg"
-//    }, {
-//        "photoUrl": "http://pic1.win4000.com/mobile/2018-04-04/5ac478a0c2473.jpg"
-//    }, {
-//        "photoUrl": "http://pic1.win4000.com/mobile/2018-04-04/5ac478a1df72a.jpg"
-//    }, {
-//        "photoUrl": "http://pic1.win4000.com/mobile/2018-04-04/5ac478a31d397.jpg"
-//    }, {
-//        "photoUrl": "http://pic1.win4000.com/mobile/2018-04-04/5ac478a441168.jpg"
 //    }],
 //    "albumIntro": "蔡徐坤帅气图片高清手机壁纸。分享一组壁纸尺寸：690*1227。蔡徐坤（August），1998年8月2日出生于湖南省，中国内地男歌手、演员。更多蔡徐坤壁纸图片尽在美桌网。",
 //    "width": "640",
@@ -48,18 +37,30 @@ abstract class CommonTabResponsListener : ResponseListener() {
 //    "thumbnailUrl ": "http://pic1.win4000.com/mobile/2018-04-04/5ac478a441168_250_350.jpg"
 
     private fun AnalyzeResposeData(p1: Response?): ArrayList<AlbumBean> {
+        println("AnalyzeResposeData11111 currenttime = " + System.currentTimeMillis())
         val jsonResponse = p1?.body()?.string()
-        println("CommonTabResponsListener = " + p1?.headers() + " body = " + jsonResponse)
+        println("AnalyzeResposeData22222222 currenttime = " + System.currentTimeMillis())
         val resultList = ArrayList<AlbumBean>()
         val jsonArray = JSONArray(jsonResponse)
         val length = jsonArray.length()
         for (i in 0..length - 1) {
             val classifyJson = jsonArray.getJSONObject(i)
             val albumUrl = classifyJson.getString("albumUrl")
-            val thumbnailUrl = classifyJson.getString("thumbnailUrl")
+            val thumbnailUrl = classifyJson.getString("thumbnailUrl ")
             val title = classifyJson.getString("title")
-            resultList.add(AlbumBean(albumUrl, title, thumbnailUrl))
+            val albumBean = AlbumBean(albumUrl, title, thumbnailUrl)
+
+            val photosJsonArray = classifyJson.getJSONArray("albumPhotos")
+            for (j in 0..photosJsonArray.length() - 1) {
+                val photoJsonObject = photosJsonArray.getJSONObject(j)
+                val photoUrl = photoJsonObject.getString("photoUrl")
+                albumBean.albumPhotoList.add(photoUrl)
+            }
+
+            resultList.add(albumBean)
         }
+
+        println("analyzeComplete() currenttime = " + System.currentTimeMillis())
         return resultList
 
     }

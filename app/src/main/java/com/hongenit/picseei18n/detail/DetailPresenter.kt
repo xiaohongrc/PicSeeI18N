@@ -12,7 +12,7 @@ import com.hongenit.picseei18n.util.ToastUtil
 class DetailPresenter : IDetailPresenter, DetailResponse {
     override fun onSuccess(picList: ArrayList<PicBean>) {
         if (!mView.isFinishing) {
-            mView.replaceData(picList)
+//            mView.replaceData(picList)
         }
         mView.showLoadingView(false)
     }
@@ -38,8 +38,8 @@ class DetailPresenter : IDetailPresenter, DetailResponse {
         mView = view
     }
 
-    override fun requestData(url: String) {
-        mView.showLoadingView(true)
-//        DetailModel.requestDetails(url, 1, this)
-    }
+//    override fun requestData(url: String) {
+//        mView.showLoadingView(true)
+////        DetailModel.requestDetails(url, 1, this)
+//    }
 }

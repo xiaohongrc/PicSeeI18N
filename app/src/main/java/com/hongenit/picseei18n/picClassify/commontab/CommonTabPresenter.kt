@@ -1,6 +1,8 @@
 package com.hongenit.picseei18n.picClassify.commontab
 
 import android.content.Context
+import com.bumptech.glide.Glide.init
+import com.hongenit.picseei18n.PicSeeApplication
 import com.hongenit.picseei18n.R
 import com.hongenit.picseei18n.net.ResponseListener
 import com.hongenit.picseei18n.picClassify.AlbumBean
@@ -17,13 +19,17 @@ private val TAG: String = "CommonTabPresenter"
 
 class CommonTabPresenter(context: Context) : ICommonTabPresenter, CommonTabResponsListener() {
     override fun onAnalyzeComplete(picList: ArrayList<AlbumBean>) {
-        if (mView.isVisible) {
-            if (isLoadMore) {
-                mView.addData(picList)
-            } else {
-                mView.replaceData(picList)
+        PicSeeApplication.runOnUiThread(Runnable {
+            run {
+                if (mView.isVisible) {
+                    if (isLoadMore) {
+                        mView.addData(picList)
+                    } else {
+                        mView.replaceData(picList)
+                    }
+                }
             }
-        }
+        })
 
     }
 
@@ -35,6 +41,7 @@ class CommonTabPresenter(context: Context) : ICommonTabPresenter, CommonTabRespo
     var isLoadMore: Boolean = false
     lateinit var mContext: Context
     lateinit var mCommonTabModel: CommonTabModel
+
     init {
         mContext = context
         mCommonTabModel = CommonTabModel(this)

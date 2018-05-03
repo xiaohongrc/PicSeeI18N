@@ -20,6 +20,8 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".detail.DetailsActivity"/>
+
 
         <!--<activity-->
         <!--android:name="com.hongenit.picseei18n.detail.DetailsActivity"-->

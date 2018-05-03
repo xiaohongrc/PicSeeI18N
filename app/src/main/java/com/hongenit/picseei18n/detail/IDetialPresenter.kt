@@ -9,7 +9,7 @@ interface IDetailPresenter {
 
     fun start(view: DetailsActivity)
 
-    fun requestData(url: String)
+//    fun requestData(url: String)
 
 
 }

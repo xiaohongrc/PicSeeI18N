@@ -6,6 +6,8 @@ package com.hongenit.picseei18n.picClassify
  */
 data class
 AlbumBean(var albumUrl: String?, var title: String?, var thumbnailUrl: String?) {
+    public val albumPhotoList = ArrayList<String>()
+
 
 
 

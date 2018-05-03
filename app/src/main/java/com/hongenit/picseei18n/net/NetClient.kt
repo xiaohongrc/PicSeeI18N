@@ -21,6 +21,7 @@ class NetClient : INetClient {
             }
 
             override fun onResponse(p0: Call?, p1: Response?) {
+
                 LogUtil.i(TAG, p1.toString())
                 listener.onComplete(p1)
             }
