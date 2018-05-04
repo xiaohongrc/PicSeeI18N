@@ -4,7 +4,6 @@ import android.content.Context
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentPagerAdapter
-import com.bumptech.glide.Glide.init
 import com.hongenit.picseei18n.R
 import com.hongenit.picseei18n.picClassify.commontab.CommonTabFragment
 

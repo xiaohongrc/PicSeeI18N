@@ -67,7 +67,7 @@ class CommonTabPresenter(context: Context) : ICommonTabPresenter, CommonTabRespo
 
 
     override fun start(url: String) {
-        mCommonTabModel.reqOutList(url, 1, this)
+        mCommonTabModel.reqOutList(url, 0, this)
     }
 
     private lateinit var mView: CommonTabFragment
@@ -76,7 +76,7 @@ class CommonTabPresenter(context: Context) : ICommonTabPresenter, CommonTabRespo
         mView = fragment
     }
 
-    private var mPageNum: Int = 1
+    private var mPageNum: Int = 0
 
     override fun requestData(isLoadMore: Boolean, url: String) {
         this.isLoadMore = isLoadMore

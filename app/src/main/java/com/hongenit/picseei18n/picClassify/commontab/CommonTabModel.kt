@@ -2,6 +2,7 @@ package com.hongenit.picseei18n.picClassify.commontab
 
 import com.hongenit.picseei18n.net.ResponseListener
 import com.hongenit.picseei18n.net.WebServiceImpl
+import java.util.*
 
 /**
  * Created by hongenit on 18/1/31.
@@ -25,8 +26,9 @@ class CommonTabModel() {
         mPressenter = commonTabPresenter
     }
 
-    fun reqOutList(url: String, index: Int, response: ResponseListener) {
-        webservice.getAlbumInfoList(url, response)
+    fun reqOutList(url: String, page: Int, response: ResponseListener) {
+        val urlWithParam = url + "?page=" + page + "country=" + Locale.getDefault().country
+        webservice.getAlbumInfoList(urlWithParam, response)
     }
 
 

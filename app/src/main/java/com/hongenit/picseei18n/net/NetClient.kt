@@ -13,7 +13,7 @@ class NetClient : INetClient {
 
     private val TAG = javaClass.simpleName
     override fun sendRequest(request: Request, listener: ResponseListener) {
-//        val request = Request.Builder().url(url).build()
+        LogUtil.d(TAG,request.toString())
         OkHttpClient().newCall(request).enqueue(object : Callback {
             override fun onFailure(p0: Call?, p1: IOException?) {
                 LogUtil.e(TAG, p1.toString())
@@ -30,7 +30,6 @@ class NetClient : INetClient {
 
 
     override fun sendRequest(request: Request): String {
-//        val request = Request.Builder().url(url).build()
         var response = ""
         response = OkHttpClient().newCall(request).execute().toString()
 

@@ -11,14 +11,11 @@ class WebServiceImpl:IWebService {
     override fun getClassifyList(url :String ,listener:ResponseListener){
         val request = Request.Builder().url(url).build()
         INetClient.sendRequest(request,listener)
-
     }
 
     override fun getAlbumInfoList(url :String ,listener:ResponseListener) {
         val request = Request.Builder().url(url).build()
         INetClient.sendRequest(request,listener)
-
     }
-
 
 }

@@ -17,18 +17,26 @@
         android:id="@+id/tvLoadImageFail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:drawableLeft="@drawable/load_image_error"
+        android:drawableStart="@drawable/load_image_error"
         android:text="@string/load_image_error"
         android:textColor="@color/white"
-        android:layout_gravity="center"
-        android:drawableStart="@drawable/load_image_error"
-        android:visibility="gone"
-        />
+        android:visibility="gone" />
 
     <ImageView
         android:id="@+id/ivDetailPic"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="fitCenter" />
+
+    <ImageView
+        android:id="@+id/bt_download"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|start"
+        android:layout_margin="30dp"
+        android:src="@drawable/btn_download" />
 
 
 </FrameLayout>
