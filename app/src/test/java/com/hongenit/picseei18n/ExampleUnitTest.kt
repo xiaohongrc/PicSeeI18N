@@ -1,5 +1,6 @@
 package com.hongenit.picseei18n
 
+import com.hongenit.picseei18n.util.Utils
 import org.junit.Test
 
 import org.junit.Assert.*

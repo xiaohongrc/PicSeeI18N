@@ -27,7 +27,7 @@ class CommonTabModel() {
     }
 
     fun reqOutList(url: String, page: Int, response: ResponseListener) {
-        val urlWithParam = url + "?page=" + page + "country=" + Locale.getDefault().country
+        val urlWithParam = url + "&page=" + page + "&country=" + Locale.getDefault().country
         webservice.getAlbumInfoList(urlWithParam, response)
     }
 

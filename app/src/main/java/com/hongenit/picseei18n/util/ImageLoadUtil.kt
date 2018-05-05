@@ -36,7 +36,7 @@ class ImageLoadUtil {
     fun loadRoundImage(context: Context, imageView: ImageView, imgUrl: String, cornerRadius: Float, listener: ImageLoadListener) {
         val crossFade = DrawableTransitionOptions().crossFade(100)
         val requestOptions = RequestOptions().transform(CornersTransform(context, cornerRadius))
-        Glide.with(context).load(imgUrl).transition(crossFade).apply(requestOptions).listener(object : RequestListener<Drawable> {
+        Glide.with(context).load(imgUrl).apply(requestOptions).listener(object : RequestListener<Drawable> {
             override fun onLoadFailed(e: GlideException?, model: Any, target: Target<Drawable>, isFirstResource: Boolean): Boolean {
                 listener.onLoadFailed()
                 return false

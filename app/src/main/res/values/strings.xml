@@ -19,5 +19,8 @@
     <string name="classify_meishi">美食</string>
     <!--<string name="classify_others">其它</string>-->
 
+    <string name="download_success">保存成功</string>
+
+
 
 </resources>
