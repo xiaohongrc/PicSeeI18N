@@ -190,6 +190,9 @@ class DetailsActivity : BaseActivity() {
 
         override fun onBindViewHolder(holder: RecyclerView.ViewHolder?, position: Int) {
             val detailViewHolder = holder as DetailViewHolder
+            detailViewHolder.itemView.setOnClickListener(View.OnClickListener {
+                detailViewHolder.itemView.bt_download.visibility = if (detailViewHolder.itemView.bt_download.isShown) View.GONE else View.VISIBLE
+            })
             mCardAdapterHelper.onBindViewHolder(detailViewHolder.itemView, position, mPicList.size)
             val cornerRadius = resources.getDimension(R.dimen.detail_cardview_radius)
             ImageLoadUtil.newInstance()!!.loadRoundImage(this@DetailsActivity, detailViewHolder.itemView.ivDetailPic, mPicList[position], cornerRadius, object : ImageLoadUtil.ImageLoadListener {
