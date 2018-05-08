@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "161624856639",
+    "firebase_url": "https://picsee-3004f.firebaseio.com",
+    "project_id": "picsee-3004f",
+    "storage_bucket": "picsee-3004f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:161624856639:android:545d48d145544490",
+        "android_client_info": {
+          "package_name": "com.hongenit.picseei18n"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "161624856639-4um5j7h8pa6c0e74qpo3deih3heu99hl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtdNEpXhU9K98lfpgSehNLBgdodM2lE5w"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

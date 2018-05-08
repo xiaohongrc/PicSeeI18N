@@ -3,6 +3,7 @@ package com.hongenit.picseei18n
 import android.app.Application
 import android.content.Context
 import android.os.Handler
+import com.google.android.gms.ads.MobileAds
 
 
 /**
@@ -15,8 +16,6 @@ class PicSeeApplication : Application() {
     val TAG = "PicSeeApplication"
     override fun onCreate() {
         sContext = applicationContext
-
-
         super.onCreate()
 
     }

@@ -20,7 +20,9 @@
     <!--<string name="classify_others">其它</string>-->
 
     <string name="download_success">保存成功</string>
-
+    <string name="contact_me">Any questions please contact us:</string>
+    <string name="my_gmail">hognenit@gmail.com</string>
+    <string name="version">Version:</string>
 
 
 </resources>

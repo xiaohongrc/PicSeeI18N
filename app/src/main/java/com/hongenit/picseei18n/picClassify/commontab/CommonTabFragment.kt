@@ -86,14 +86,14 @@ class CommonTabFragment : BaseFragment() {
     override fun initData() {
         srlLayout.isRefreshing = true
         mPresenter.start(mUrl)
-        println("mUrl = "+mUrl)
+        println("mUrl = " + mUrl)
     }
 
 
     private lateinit var mUrl: String
 
     override fun initParams() {
-        mUrl = RequestUrl.ALBUM_INFO_LIST+"?whichClassify="+arguments.getString(KEY_ARGUMENTS_PHOTOS)
+        mUrl = RequestUrl.ALBUM_INFO_LIST + "?whichClassify=" + arguments.getString(KEY_ARGUMENTS_PHOTOS)
     }
 
 
@@ -153,8 +153,10 @@ class CommonTabFragment : BaseFragment() {
 
     // 加载更多时添加数据
     fun addData(picList: ArrayList<AlbumBean>) {
-        mPicList.addAll(picList)
-        rvList.adapter.notifyDataSetChanged()
+        if (picList.size > 0) {
+            mPicList.addAll(picList)
+            rvList.adapter.notifyDataSetChanged()
+        }
         srlLayout.isRefreshing = false
     }
 

@@ -27,6 +27,9 @@ import android.content.pm.PackageManager
 import android.net.Uri
 import android.support.v4.app.ActivityCompat
 import android.support.v4.content.ContextCompat
+import com.google.android.gms.ads.AdListener
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
 import com.hongenit.picseei18n.Constants
 import com.hongenit.picseei18n.util.*
 import java.io.BufferedOutputStream
@@ -55,13 +58,41 @@ class DetailsActivity : BaseActivity() {
         mPicList = intent.getStringArrayListExtra(KEY_ARGUMENTS_PHOTOS)
     }
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_details)
         initParams()
         initView()
         initData()
+
+        val adRequest = AdRequest.Builder().build()
+        adView.loadAd(adRequest)
+        adView.adListener = object : AdListener() {
+            override fun onAdLoaded() {
+                println("onAdLoaded")
+
+                super.onAdLoaded()
+            }
+
+            override fun onAdClosed() {
+                println("onAdClosed")
+
+                super.onAdClosed()
+            }
+
+            override fun onAdClicked() {
+                println("onAdClicked")
+
+                super.onAdClicked()
+            }
+
+            override fun onAdFailedToLoad(p0: Int) {
+                println("onAdFailedToLoad code = " + p0)
+                super.onAdFailedToLoad(p0)
+            }
+
+        }
+
     }
 
     private lateinit var mCardScaleHelper: CardScaleHelper
@@ -171,24 +202,6 @@ class DetailsActivity : BaseActivity() {
     }
 
 
-    /**
-     * 设置toolbar的标题
-     *
-     * @param mToolbar Toolbar
-     * @param title    标题
-     */
-    fun setToolBar(title: String) {
-        //setSupportActionBar之前设置标题
-        toolbar.setTitle(title)
-        setSupportActionBar(toolbar)
-        val supportActionBar = supportActionBar
-        if (supportActionBar != null) {
-            //让导航按钮显示出来
-            supportActionBar.setDisplayHomeAsUpEnabled(true)
-            //设置导航按钮图标
-            supportActionBar.setDisplayShowHomeEnabled(true)
-        }
-    }
 
 
     private val MY_PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE: Int = 1000
@@ -237,7 +250,7 @@ class DetailsActivity : BaseActivity() {
                             Manifest.permission.WRITE_EXTERNAL_STORAGE)
                     != PackageManager.PERMISSION_GRANTED) {
 
-// Should we show an explanation?
+                // Should we show an explanation?
                 if (ActivityCompat.shouldShowRequestPermissionRationale(this@DetailsActivity,
                                 Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
 

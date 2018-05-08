@@ -2,6 +2,8 @@ package com.hongenit.picseei18n;
 
 import android.os.Environment;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.io.File;
 
 /**
@@ -20,7 +22,8 @@ public interface Constants {
     String UMENG_CHANNEL_NAME = "baidu";
 
 
-
-
+    String ADMOB_APP_ID = "ca-app-pub-1616641096587052~3240065845";
+    // admob ID of banner 1
+    String ADMOB_banner_ID1 = "ca-app-pub-1616641096587052/7393690000";
 
 }

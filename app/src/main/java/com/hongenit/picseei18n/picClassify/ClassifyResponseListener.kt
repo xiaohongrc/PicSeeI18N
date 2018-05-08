@@ -28,7 +28,7 @@ open abstract class ClassifyResponseListener : ResponseListener() {
             val classifyJson = jsonArray.getJSONObject(i)
             val classifyUrl = classifyJson.getString("classifyUrl")
             val classifyTitle = classifyJson.getString("classifyTitle")
-            resultList.add(ClassifyTypeBean(classifyUrl, classifyTitle))
+            resultList.add(ClassifyTypeBean(classifyUrl, classifyTitle,""))
         }
 
         return resultList

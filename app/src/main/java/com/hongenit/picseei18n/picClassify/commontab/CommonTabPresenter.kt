@@ -80,7 +80,11 @@ class CommonTabPresenter(context: Context) : ICommonTabPresenter, CommonTabRespo
 
     override fun requestData(isLoadMore: Boolean, url: String) {
         this.isLoadMore = isLoadMore
-        if (isLoadMore) mPageNum++
+        if (isLoadMore) {
+            mPageNum++
+        } else {
+            mPageNum = 0
+        }
         mCommonTabModel.reqOutList(url, mPageNum, this)
 
     }

@@ -46,7 +46,7 @@ abstract class CommonTabResponsListener : ResponseListener() {
         for (i in 0..length - 1) {
             val classifyJson = jsonArray.getJSONObject(i)
             val albumUrl = classifyJson.getString("albumUrl")
-            val thumbnailUrl = classifyJson.getString("thumbnailUrl ")
+            val thumbnailUrl = classifyJson.getString("thumbnailUrl")
             val title = classifyJson.getString("title")
             val albumBean = AlbumBean(albumUrl, title, thumbnailUrl)
 
