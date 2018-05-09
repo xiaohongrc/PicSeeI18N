@@ -10,6 +10,7 @@ import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.RequestOptions
 import com.bumptech.glide.request.target.Target
+import gallerylibrary.util.ScreenUtil
 
 /**
  * Created by hongenit on 18/1/31.
@@ -33,17 +34,17 @@ class ImageLoadUtil {
         Glide.with(context).load(imgUrl).transition(crossFade).into(imageView)
     }
 
-    fun loadRoundImage(context: Context, imageView: ImageView, imgUrl: String, cornerRadius: Float, listener: ImageLoadListener) {
+    fun loadRoundImage(context: Context, imageView: ImageView, imgUrl: String, cornerRadius: Float= ScreenUtil.dip2px(context, 20F).toFloat(), listener: ImageLoadListener? = null) {
         val crossFade = DrawableTransitionOptions().crossFade(100)
         val requestOptions = RequestOptions().transform(CornersTransform(context, cornerRadius))
         Glide.with(context).load(imgUrl).apply(requestOptions).listener(object : RequestListener<Drawable> {
             override fun onLoadFailed(e: GlideException?, model: Any, target: Target<Drawable>, isFirstResource: Boolean): Boolean {
-                listener.onLoadFailed()
+                listener?.onLoadFailed()
                 return false
             }
 
             override fun onResourceReady(resource: Drawable, model: Any, target: Target<Drawable>, dataSource: DataSource, isFirstResource: Boolean): Boolean {
-                listener.onLoadComplete()
+                listener?.onLoadComplete()
                 return false
             }
         }).into(imageView)

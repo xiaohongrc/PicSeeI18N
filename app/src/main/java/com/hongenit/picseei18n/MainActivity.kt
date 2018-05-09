@@ -1,11 +1,12 @@
 package com.hongenit.picseei18n
 
+import android.content.Intent
 import android.content.pm.PackageManager
-import android.os.Build
 import android.os.Bundle
 import android.support.v4.widget.DrawerLayout
 import android.view.View
 import com.google.android.gms.ads.MobileAds
+import com.hongenit.picseei18n.favourites.FavouritesActivity
 import com.hongenit.picseei18n.picClassify.StyleClassifyFragment
 import com.hongenit.picseei18n.util.LogUtil
 import kotlinx.android.synthetic.main.activity_main.*
@@ -15,8 +16,9 @@ class MainActivity : BaseActivity(), View.OnClickListener {
     override fun onClick(v: View?) {
         when (v) {
             tv_menu_item1 -> {
+                val intent = Intent(this@MainActivity, FavouritesActivity::class.java)
+                startActivity(intent)
             }
-
             close_menu -> {
                 if (drawer_layout.isDrawerOpen(rl_menu))
                     drawer_layout.closeDrawer(rl_menu)

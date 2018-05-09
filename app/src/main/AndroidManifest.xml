@@ -24,6 +24,7 @@
         </activity>
 
         <activity android:name=".detail.DetailsActivity" />
+        <activity android:name=".favourites.FavouritesActivity" />
 
 
         <!--<activity-->
