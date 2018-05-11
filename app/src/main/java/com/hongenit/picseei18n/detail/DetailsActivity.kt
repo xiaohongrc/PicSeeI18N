@@ -24,6 +24,7 @@ import java.net.HttpURLConnection
 import java.net.URL
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.graphics.drawable.Drawable
 import android.net.Uri
 import android.support.v4.app.ActivityCompat
 import android.support.v4.content.ContextCompat
@@ -31,6 +32,8 @@ import com.google.android.gms.ads.AdListener
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdView
 import com.hongenit.picseei18n.Constants
+import com.hongenit.picseei18n.DataModel
+import com.hongenit.picseei18n.db.SqliteDBImpl
 import com.hongenit.picseei18n.util.*
 import java.io.BufferedOutputStream
 import java.io.File
@@ -42,9 +45,13 @@ import java.io.FileOutputStream
  * create at 2018/2/1 16:22
  * description：
  */
-class DetailsActivity : BaseActivity() {
+class DetailsActivity : BaseActivity(), DataModel.FavouriteListChangedListener {
+    override fun onFavouriteListChanged() {
+        speedRecyclerView.adapter.notifyDataSetChanged()
+    }
+
     val TAG = "DetailsActivity"
-    var mPicList = arrayListOf<String>()
+    var mPicList = arrayListOf<PicBean>()
 
 //    fun replaceData(picList: ArrayList<PicBean>) {
 //        mPicList.clear()
@@ -55,7 +62,7 @@ class DetailsActivity : BaseActivity() {
 
     //    private var mUrl= ArrayList<String>()
     fun initParams() {
-        mPicList = intent.getStringArrayListExtra(KEY_ARGUMENTS_PHOTOS)
+        mPicList = intent.getSerializableExtra(KEY_ARGUMENTS_PHOTOS) as ArrayList<PicBean>
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -119,6 +126,8 @@ class DetailsActivity : BaseActivity() {
                 }
             }
         })
+
+        DataModel.getInstance().addFavouriteListChangedListener(this)
 
     }
 
@@ -202,8 +211,6 @@ class DetailsActivity : BaseActivity() {
     }
 
 
-
-
     private val MY_PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE: Int = 1000
 
     inner class DetailsListAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
@@ -219,18 +226,38 @@ class DetailsActivity : BaseActivity() {
 
         override fun onBindViewHolder(holder: RecyclerView.ViewHolder?, position: Int) {
             val detailViewHolder = holder as DetailViewHolder
+            // 如果已经点赞则隐藏按钮
+            val hadFavour = DataModel.getInstance().mFavouritePics.contains(mPicList[position])
+            if (hadFavour) {
+                detailViewHolder.itemView.bt_favour.visibility = View.GONE
+            }
+
             detailViewHolder.itemView.setOnClickListener(View.OnClickListener {
                 detailViewHolder.itemView.bt_download.visibility = if (detailViewHolder.itemView.bt_download.isShown) View.GONE else View.VISIBLE
+                detailViewHolder.itemView.bt_favour.visibility = if (detailViewHolder.itemView.bt_favour.isShown || hadFavour) View.GONE else View.VISIBLE
             })
             detailViewHolder.itemView.bt_download.setOnClickListener(View.OnClickListener {
-                val bitmapDrawable = detailViewHolder.itemView.ivDetailPic.drawable as BitmapDrawable
-                downLoadPic(bitmapDrawable.bitmap, position)
+                var bitmapDrawable: BitmapDrawable? = null
+                try {
+                    bitmapDrawable = detailViewHolder.itemView.ivDetailPic.drawable as BitmapDrawable
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                }
+
+                if (bitmapDrawable != null) {
+                    downLoadPic(bitmapDrawable.bitmap, position)
+                }
 
             })
-            detailViewHolder.itemView.bt_download.setTag(position)
+//            detailViewHolder.itemView.bt_download.setTag(position)
+
+            detailViewHolder.itemView.bt_favour.setOnClickListener(View.OnClickListener {
+                doFavourPic(position)
+
+            })
             mCardAdapterHelper.onBindViewHolder(detailViewHolder.itemView, position, mPicList.size)
             val cornerRadius = resources.getDimension(R.dimen.detail_cardview_radius)
-            ImageLoadUtil.newInstance()!!.loadRoundImage(this@DetailsActivity, detailViewHolder.itemView.ivDetailPic, mPicList[position], cornerRadius, object : ImageLoadUtil.ImageLoadListener {
+            ImageLoadUtil.newInstance()!!.loadRoundImage(this@DetailsActivity, detailViewHolder.itemView.ivDetailPic, mPicList[position].url, cornerRadius, object : ImageLoadUtil.ImageLoadListener {
                 override fun onLoadComplete() {
                     detailViewHolder.itemView.loadingView.visibility = View.GONE
                 }
@@ -240,6 +267,16 @@ class DetailsActivity : BaseActivity() {
                     detailViewHolder.itemView.loadingView.visibility = View.GONE
                 }
             })
+
+        }
+
+        // 收藏照片
+        private fun doFavourPic(position: Int) {
+            if (position < mPicList.size) {
+                val picUrl = mPicList[position].url
+                val picBean = PicBean(picUrl, System.currentTimeMillis())
+                DataModel.getInstance().insertFavouritePic(picBean)
+            }
 
         }
 
@@ -276,7 +313,7 @@ class DetailsActivity : BaseActivity() {
                 val externalStorageState = Environment.getExternalStorageState()
                 if (externalStorageState == Environment.MEDIA_MOUNTED) {
                     val imageCacheDir = File(Environment.getExternalStorageDirectory(), "picseesee")
-                    val fileName = Utils.getMD5(mPicList[position]) + ".jpeg"
+                    val fileName = Utils.getMD5(mPicList[position].url) + ".jpeg"
                     try {
 //                    var file: File? = null
                         if (!imageCacheDir.exists()) {
@@ -324,6 +361,11 @@ class DetailsActivity : BaseActivity() {
 
     override fun onPause() {
         super.onPause()
+    }
+
+    override fun onStop() {
+        DataModel.getInstance().removeFavouriteListChangedListener(this)
+        super.onStop()
     }
 
 

@@ -36,7 +36,18 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|start"
         android:layout_margin="30dp"
-        android:src="@drawable/btn_download" />
+        android:src="@drawable/btn_download"
+        android:visibility="gone" />
+
+
+    <ImageView
+        android:id="@+id/bt_favour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="22dp"
+        android:src="@drawable/ic_favour"
+        android:visibility="gone" />
 
 
 </FrameLayout>

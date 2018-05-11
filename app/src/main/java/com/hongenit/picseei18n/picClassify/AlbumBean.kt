@@ -1,12 +1,14 @@
 package com.hongenit.picseei18n.picClassify
 
+import com.hongenit.picseei18n.detail.PicBean
+
 /**
  * Created by hongenit on 18/2/6.
  * desc:分类图集数据类
  */
 data class
 AlbumBean(var albumUrl: String?, var title: String?, var thumbnailUrl: String?) {
-    public val albumPhotoList = ArrayList<String>()
+    val albumPhotoList = ArrayList<PicBean>()
 
 
 

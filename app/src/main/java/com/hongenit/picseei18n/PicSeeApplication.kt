@@ -16,6 +16,8 @@ class PicSeeApplication : Application() {
     val TAG = "PicSeeApplication"
     override fun onCreate() {
         sContext = applicationContext
+        DataModel.getInstance().initDataModel(sContext)
+        DataModel.getInstance().queryAllFavouritePics()
         super.onCreate()
 
     }

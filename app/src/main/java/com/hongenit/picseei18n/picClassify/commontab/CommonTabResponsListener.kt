@@ -1,5 +1,6 @@
 package com.hongenit.picseei18n.picClassify.commontab
 
+import com.hongenit.picseei18n.detail.PicBean
 import com.hongenit.picseei18n.net.ResponseListener
 import com.hongenit.picseei18n.picClassify.AlbumBean
 import com.hongenit.picseei18n.picClassify.ClassifyTypeBean
@@ -54,7 +55,7 @@ abstract class CommonTabResponsListener : ResponseListener() {
             for (j in 0..photosJsonArray.length() - 1) {
                 val photoJsonObject = photosJsonArray.getJSONObject(j)
                 val photoUrl = photoJsonObject.getString("photoUrl")
-                albumBean.albumPhotoList.add(photoUrl)
+                albumBean.albumPhotoList.add(PicBean(photoUrl, 0))
             }
 
             resultList.add(albumBean)

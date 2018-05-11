@@ -9,5 +9,6 @@
     <dimen name="detail_cardview_radius">5dp</dimen>
     <dimen name="menu_item_padding">20dp</dimen>
     <dimen name="menu_item_size">16sp</dimen>
+    <dimen name="detail_btn_size">38dp</dimen>
 
 </resources>

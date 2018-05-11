@@ -4,6 +4,7 @@ import android.content.Context
 import android.support.v4.view.PagerAdapter
 import android.view.View
 import android.view.ViewGroup
+import com.hongenit.picseei18n.detail.PicBean
 
 /**
  * Created by Xiaohong on 2018/5/9.
@@ -16,9 +17,9 @@ class FavouriteAdapter(context: Context) : PagerAdapter() {
         mContext = context
     }
 
-    val favouritePhotos: ArrayList<String> = arrayListOf()
+    val favouritePhotos: ArrayList<PicBean> = arrayListOf()
 
-    fun setData(arrayList: ArrayList<String>) {
+    fun setData(arrayList: ArrayList<PicBean>) {
         favouritePhotos.clear()
         favouritePhotos.addAll(arrayList)
         notifyDataSetChanged()
@@ -39,10 +40,10 @@ class FavouriteAdapter(context: Context) : PagerAdapter() {
     override fun instantiateItem(container: ViewGroup?, position: Int): Any {
         if (position < favouritePhotos.size) {
             val favouritePhotoView = FavouritePhotoView(mContext)
-            val url = favouritePhotos[position]
-            favouritePhotoView.setPic(url)
-            println("url = " + url)
-            favouritePhotoView.tag = url
+            val picBean = favouritePhotos[position]
+            favouritePhotoView.setPic(picBean.url)
+            println("picBean = " + picBean)
+            favouritePhotoView.tag = picBean
             container?.addView(favouritePhotoView)
             return favouritePhotoView
         }
@@ -69,8 +70,8 @@ class FavouriteAdapter(context: Context) : PagerAdapter() {
 
 
     override fun getItemPosition(`object`: Any?): Int {
-        val url: String = ((`object` as FavouritePhotoView).tag) as String
-        return favouritePhotos.indexOf(url)
+        val picBean: PicBean = ((`object` as FavouritePhotoView).tag) as PicBean
+        return favouritePhotos.indexOf(picBean)
 
     }
 

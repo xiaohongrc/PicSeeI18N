@@ -1,6 +1,8 @@
 package com.hongenit.picseei18n.favourites
 
+import com.hongenit.picseei18n.DataModel
 import com.hongenit.picseei18n.R
+import com.hongenit.picseei18n.db.SqliteDBImpl
 import com.hongenit.picseei18n.picClassify.BaseFragment
 import kotlinx.android.synthetic.main.fragment_favourite.*
 import java.io.BufferedReader
@@ -20,35 +22,30 @@ class FavouriteFragment : BaseFragment() {
     }
 
     override fun initData() {
-        val arrayList: ArrayList<String> = arrayListOf()
-        val bufferedReader = BufferedReader(InputStreamReader(resources.openRawResource(R.raw.imgurls)))
+        (vp_favourites.adapter as FavouriteAdapter).setData(DataModel.getInstance().mFavouritePics)
 
-        var line = ""
-        try {
-            while (true) {
-                if (bufferedReader != null) {
-                    line = bufferedReader.readLine()
-                    if (line == null) {
-                        print("nulll")
-                        break
-                    }
-                    arrayList.add(line)
-                    println("line = " + line)
-                } else {
-                    break
-                }
-            }
-            (vp_favourites.adapter as FavouriteAdapter).setData(arrayList)
-        } catch (e: Exception) {
-            println(e)
-        } finally {
-            try {
-                bufferedReader.close()
-            } catch (e: Exception) {
-                println(e)
-            }
-        }
 
+//        val arrayList: ArrayList<String> = arrayListOf()
+
+//        val bufferedReader = BufferedReader(InputStreamReader(resources.openRawResource(R.raw.imgurls)))
+//
+//        var line = ""
+//        try {
+//            while (true) {
+//                line = bufferedReader.readLine() ?: break
+//                arrayList.add(line)
+//                println("line = " + line)
+//            }
+//            (vp_favourites.adapter as FavouriteAdapter).setData(arrayList)
+//        } catch (e: Exception) {
+//            println(e)
+//        } finally {
+//            try {
+//                bufferedReader.close()
+//            } catch (e: Exception) {
+//                println(e)
+//            }
+//        }
 
     }
 }

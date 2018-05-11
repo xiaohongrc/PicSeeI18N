@@ -104,11 +104,11 @@ class CommonTabFragment : BaseFragment() {
         }
 
         private fun forwardDetailActivity(pos: Int) {
-            val picBean = mPicList[pos]
+            val albumBean = mPicList[pos]
             val intent = Intent(context, DetailsActivity::class.java)
-            intent.putExtra(KEY_ARGUMENTS_PHOTOS, picBean.albumPhotoList)
+            intent.putExtra(KEY_ARGUMENTS_PHOTOS, albumBean.albumPhotoList)
             EventUtil.tab_url_click(mUrl)
-            EventUtil.detail_url_click(picBean.albumUrl)
+            EventUtil.detail_url_click(albumBean.albumUrl)
             context.startActivity(intent)
         }
 
