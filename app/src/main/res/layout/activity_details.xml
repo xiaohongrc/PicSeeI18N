@@ -30,7 +30,7 @@
         android:id="@+id/adView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal|bottom"
+        android:layout_gravity="center_horizontal"
         ads:adSize="BANNER"
         ads:adUnitId="ca-app-pub-1616641096587052/7393690000" />
 

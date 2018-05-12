@@ -47,7 +47,7 @@ import java.io.FileOutputStream
  */
 class DetailsActivity : BaseActivity(), DataModel.FavouriteListChangedListener {
     override fun onFavouriteListChanged() {
-        speedRecyclerView.adapter.notifyDataSetChanged()
+//        speedRecyclerView.adapter.notifyDataSetChanged()
     }
 
     val TAG = "DetailsActivity"
@@ -57,7 +57,6 @@ class DetailsActivity : BaseActivity(), DataModel.FavouriteListChangedListener {
 //        mPicList.clear()
 //        mPicList.addAll(picList)
 //        speedRecyclerView.adapter.notifyDataSetChanged()
-//
 //    }
 
     //    private var mUrl= ArrayList<String>()
@@ -234,7 +233,8 @@ class DetailsActivity : BaseActivity(), DataModel.FavouriteListChangedListener {
 
             detailViewHolder.itemView.setOnClickListener(View.OnClickListener {
                 detailViewHolder.itemView.bt_download.visibility = if (detailViewHolder.itemView.bt_download.isShown) View.GONE else View.VISIBLE
-                detailViewHolder.itemView.bt_favour.visibility = if (detailViewHolder.itemView.bt_favour.isShown || hadFavour) View.GONE else View.VISIBLE
+                val hadFavour_click = DataModel.getInstance().mFavouritePics.contains(mPicList[position])
+                detailViewHolder.itemView.bt_favour.visibility = if (detailViewHolder.itemView.bt_favour.isShown || hadFavour_click) View.GONE else View.VISIBLE
             })
             detailViewHolder.itemView.bt_download.setOnClickListener(View.OnClickListener {
                 var bitmapDrawable: BitmapDrawable? = null
@@ -249,11 +249,10 @@ class DetailsActivity : BaseActivity(), DataModel.FavouriteListChangedListener {
                 }
 
             })
-//            detailViewHolder.itemView.bt_download.setTag(position)
 
             detailViewHolder.itemView.bt_favour.setOnClickListener(View.OnClickListener {
                 doFavourPic(position)
-
+                it.visibility = View.GONE
             })
             mCardAdapterHelper.onBindViewHolder(detailViewHolder.itemView, position, mPicList.size)
             val cornerRadius = resources.getDimension(R.dimen.detail_cardview_radius)

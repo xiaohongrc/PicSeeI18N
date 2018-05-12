@@ -1,28 +1,28 @@
 <resources>
     <string name="app_name">PicSeeSee</string>
-    <string name="girl_style">类型</string>
-    <string name="girl_area">区域划分</string>
-    <string name="msg_get_data_error">获取数据失败</string>
-    <string name="load_detail_error">获取图集失败</string>
-    <string name="load_image_error">加载图片失败</string>
-    <string name="no_more_data">没有更多数据了</string>
 
 
-    <string name="classify_mingxing">明星</string>
-    <string name="classify_meinv">美女</string>
-    <string name="classify_fengjing">风景</string>
-    <string name="classify_qiche">汽车</string>
-    <string name="classify_dongman">动漫</string>
-    <string name="classify_dongwu">动物</string>
-    <string name="classify_zhiwu">植物</string>
-    <string name="classify_tiyu">体育</string>
-    <string name="classify_meishi">美食</string>
-    <!--<string name="classify_others">其它</string>-->
+    <string name="msg_get_data_error">load data failed</string>
+    <string name="load_image_error">load picture failed</string>
+    <string name="no_more_data">no more data</string>
 
-    <string name="download_success">保存成功</string>
+    <string name="classify_mingxing">star</string>
+    <string name="classify_meinv">beauty</string>
+    <string name="classify_fengjing">scene</string>
+    <string name="classify_qiche">auto</string>
+    <string name="classify_dongman">dongman</string>
+    <string name="classify_dongwu">animal</string>
+    <string name="classify_zhiwu">zhiwu</string>
+    <string name="classify_tiyu">physics</string>
+    <string name="classify_meishi">food</string>
+
+    <string name="download_success">download success</string>
     <string name="contact_me">Any questions please contact us:</string>
     <string name="my_gmail">hognenit@gmail.com</string>
     <string name="version">Version:</string>
+    <string name="drawer_item_favourite">favourite pictures</string>
+    <string name="drawer_item_feed_back">feed back</string>
+    <string name="drawer_item3">drawer_item3</string>
 
 
 </resources>

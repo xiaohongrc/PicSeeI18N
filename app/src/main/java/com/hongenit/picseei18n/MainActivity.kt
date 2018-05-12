@@ -24,6 +24,12 @@ class MainActivity : BaseActivity(), View.OnClickListener {
                     drawer_layout.closeDrawer(rl_menu)
             }
 
+            ib_open_drawer -> {
+                if (!drawer_layout.isDrawerOpen(rl_menu)) {
+                    drawer_layout.openDrawer(rl_menu)
+                }
+            }
+
         }
 
     }
@@ -42,13 +48,8 @@ class MainActivity : BaseActivity(), View.OnClickListener {
     }
 
     private fun initView() {
-        val supportFragmentManager = supportFragmentManager
-        val beginTransaction = supportFragmentManager.beginTransaction()
-        beginTransaction.add(R.id.fl_main_content, StyleClassifyFragment.newInstance())
-        beginTransaction.commit()
-
+        ib_open_drawer.setOnClickListener(this)
         initDrawer()
-
     }
 
     private fun initDrawer() {

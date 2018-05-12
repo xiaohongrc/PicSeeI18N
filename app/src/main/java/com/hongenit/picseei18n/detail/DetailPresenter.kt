@@ -20,10 +20,9 @@ class DetailPresenter : IDetailPresenter, DetailResponse {
     val TAG: String = "DetailPresenter"
 
 
-
     override fun onError(msg: String?) {
         LogUtil.e(TAG, "msg = $msg")
-        ToastUtil.showToast(PicSeeApplication.getAppContext()!!.getString(R.string.load_detail_error))
+        ToastUtil.showToast("加载数据失败")
         mView.showLoadingView(false)
     }
 

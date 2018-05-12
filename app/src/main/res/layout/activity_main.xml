@@ -8,13 +8,29 @@
     tools:context=".MainActivity"
     tools:openDrawer="start">
 
+
     <!--中间部分-->
     <FrameLayout
         android:id="@+id/fl_main_content"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent">
 
-    <!--右侧菜单-->
+        <fragment
+            android:name="com.hongenit.picseei18n.picClassify.StyleClassifyFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <ImageButton
+            android:id="@+id/ib_open_drawer"
+            android:layout_width="@dimen/drawer_open_btn_size"
+            android:layout_height="@dimen/drawer_open_btn_size"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/ic_drawer_open"
+            tools:ignore="ContentDescription" />
+
+    </FrameLayout>
+
+    <!--左侧菜单-->
     <include layout="@layout/activity_main_menu" />
 
 </android.support.v4.widget.DrawerLayout>

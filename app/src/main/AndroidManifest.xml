@@ -23,7 +23,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".detail.DetailsActivity" />
+        <activity android:name=".detail.DetailsActivity" android:configChanges="" />
         <activity android:name=".favourites.FavouritesActivity" />
 
 
