@@ -2,9 +2,9 @@
     <string name="app_name">PicSeeSee</string>
 
 
-    <string name="msg_get_data_error">load data failed</string>
-    <string name="load_image_error">load picture failed</string>
-    <string name="no_more_data">no more data</string>
+    <string name="msg_get_data_error">Load data failed</string>
+    <string name="load_image_error">Load picture failed</string>
+    <string name="no_more_data">No more data</string>
 
     <string name="classify_mingxing">star</string>
     <string name="classify_meinv">beauty</string>
@@ -16,12 +16,12 @@
     <string name="classify_tiyu">physics</string>
     <string name="classify_meishi">food</string>
 
-    <string name="download_success">download success</string>
+    <string name="download_success">Download success</string>
     <string name="contact_me">Any questions please contact us:</string>
     <string name="my_gmail">hognenit@gmail.com</string>
     <string name="version">Version:</string>
-    <string name="drawer_item_favourite">favourite pictures</string>
-    <string name="drawer_item_feed_back">feed back</string>
+    <string name="drawer_item_favourite">Favourite pictures</string>
+    <string name="drawer_item_feed_back">Feed back</string>
     <string name="drawer_item3">drawer_item3</string>
 
 

@@ -28,6 +28,8 @@ import android.graphics.drawable.Drawable
 import android.net.Uri
 import android.support.v4.app.ActivityCompat
 import android.support.v4.content.ContextCompat
+import android.view.Window
+import android.view.WindowManager
 import com.google.android.gms.ads.AdListener
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdView
@@ -66,6 +68,11 @@ class DetailsActivity : BaseActivity(), DataModel.FavouriteListChangedListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        /*set it to be no title*/
+        requestWindowFeature(Window.FEATURE_NO_TITLE)
+        /*set it to be full screen*/
+        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN)
         setContentView(R.layout.activity_details)
         initParams()
         initView()
