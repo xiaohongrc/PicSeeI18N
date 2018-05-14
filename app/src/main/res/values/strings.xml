@@ -23,6 +23,9 @@
     <string name="drawer_item_favourite">Favourite pictures</string>
     <string name="drawer_item_feed_back">Feed back</string>
     <string name="drawer_item3">drawer_item3</string>
+    <string name="feedback_message">Application version : %1$s \n SDK Version : %2$s \n ---------Please do not delete these messages ------- \n</string>
+    <string name="feedback_title">I have problem</string>
+    <string name="feedback_email">hongenit@126.com</string>
 
 
 </resources>

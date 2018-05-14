@@ -9,6 +9,7 @@ import com.google.android.gms.ads.MobileAds
 import com.hongenit.picseei18n.favourites.FavouritesActivity
 import com.hongenit.picseei18n.picClassify.StyleClassifyFragment
 import com.hongenit.picseei18n.util.LogUtil
+import com.hongenit.picseei18n.util.Utils
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_main_menu.*
 
@@ -19,6 +20,11 @@ class MainActivity : BaseActivity(), View.OnClickListener {
                 val intent = Intent(this@MainActivity, FavouritesActivity::class.java)
                 startActivity(intent)
             }
+
+            tv_menu_item2 -> {
+                Utils.feedback(this@MainActivity, getString(R.string.feedback_title), getString(R.string.feedback_email))
+            }
+
             close_menu -> {
                 if (drawer_layout.isDrawerOpen(rl_menu))
                     drawer_layout.closeDrawer(rl_menu)
@@ -89,6 +95,7 @@ class MainActivity : BaseActivity(), View.OnClickListener {
 
 
         tv_menu_item1.setOnClickListener(this)
+        tv_menu_item2.setOnClickListener(this)
         close_menu.setOnClickListener(this)
 
 

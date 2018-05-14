@@ -1,5 +1,6 @@
 package com.hongenit.picseei18n;
 
+import android.os.Build;
 import android.os.Environment;
 
 import org.jetbrains.annotations.NotNull;
@@ -26,4 +27,6 @@ public interface Constants {
     // admob ID of banner 1
     String ADMOB_banner_ID1 = "ca-app-pub-1616641096587052/7393690000";
 
+    @NotNull
+    String SDK_VERSION = String.valueOf(Build.VERSION.SDK_INT);
 }

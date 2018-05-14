@@ -1,6 +1,12 @@
 package com.hongenit.picseei18n.util
 
+import android.content.Context
+import android.content.Intent
+import android.net.Uri
 import android.provider.SyncStateContract.Helpers.update
+import com.hongenit.picseei18n.BuildConfig
+import com.hongenit.picseei18n.Constants
+import com.hongenit.picseei18n.R
 import java.math.BigInteger
 import java.security.MessageDigest
 
@@ -31,6 +37,26 @@ class Utils {
 
         }
 
+
+        fun feedback(context: Context, feedbackTitle: String, feedbackEmail: String) {
+            try {
+                val sendIntent = Intent(Intent.ACTION_SENDTO, Uri.fromParts("mailto", feedbackEmail, null))
+                sendIntent.putExtra(Intent.EXTRA_TEXT, buildFeedbackText(context))
+                sendIntent.putExtra(Intent.EXTRA_SUBJECT, feedbackTitle)
+                sendIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                context.startActivity(sendIntent)
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+
+        }
+
+        private fun buildFeedbackText(context: Context): String {
+            return context.getString(R.string.feedback_message, BuildConfig.VERSION_NAME, Constants.SDK_VERSION)
+        }
+
+
     }
+
 
 }
