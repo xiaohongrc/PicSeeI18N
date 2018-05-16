@@ -23,10 +23,7 @@ import com.hongenit.picseei18n.BaseActivity
 import com.hongenit.picseei18n.DataModel
 import com.hongenit.picseei18n.R
 import com.hongenit.picseei18n.picClassify.commontab.KEY_ARGUMENTS_PHOTOS
-import com.hongenit.picseei18n.util.ImageLoadUtil
-import com.hongenit.picseei18n.util.LogUtil
-import com.hongenit.picseei18n.util.ToastUtil
-import com.hongenit.picseei18n.util.Utils
+import com.hongenit.picseei18n.util.*
 import gallerylibrary.CardAdapterHelper
 import gallerylibrary.CardScaleHelper
 import kotlinx.android.synthetic.main.activity_details.*
@@ -278,6 +275,9 @@ class DetailsActivity : BaseActivity(), DataModel.FavouriteListChangedListener {
             if (position < mPicList.size) {
                 val picUrl = mPicList[position].url
                 val picBean = PicBean(picUrl, System.currentTimeMillis())
+                val bundle = Bundle()
+                bundle.putString(EventUtil.FirebaseEventParams.picUrl, picUrl)
+                EventUtil.detail_photo_favour(bundle)
                 DataModel.getInstance().insertFavouritePic(picBean)
             }
 
@@ -293,23 +293,15 @@ class DetailsActivity : BaseActivity(), DataModel.FavouriteListChangedListener {
                 // Should we show an explanation?
                 if (ActivityCompat.shouldShowRequestPermissionRationale(this@DetailsActivity,
                                 Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
-
                     ToastUtil.showToast(getString(R.string.sdcard_permission))
 
                 } else {
-
                     // No explanation needed, we can request the permission.
-
                     ActivityCompat.requestPermissions(this@DetailsActivity,
                             arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE),
                             MY_PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE)
-
-                    // MY_PERMISSIONS_REQUEST_WRITE_EXTERNAL_STORAGE is an
-                    // app-defined int constant. The callback method gets the
-                    // result of the request.
                 }
             } else {
-
 
                 val externalStorageState = Environment.getExternalStorageState()
                 if (externalStorageState == Environment.MEDIA_MOUNTED) {
@@ -344,7 +336,6 @@ class DetailsActivity : BaseActivity(), DataModel.FavouriteListChangedListener {
                         LogUtil.e(TAG, "下载图片失败")
                         e.printStackTrace()
                     }
-
                 }
 
             }

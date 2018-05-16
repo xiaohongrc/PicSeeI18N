@@ -28,8 +28,8 @@ class FavouriteFragment : BaseFragment() {
 
     private fun initAdmob() {
         val adRequest = AdRequest.Builder().build()
-        adView.loadAd(adRequest)
-        adView.adListener = object : AdListener() {
+        adView_banner2.loadAd(adRequest)
+        adView_banner2.adListener = object : AdListener() {
             override fun onAdLoaded() {
                 println("onAdLoaded")
                 super.onAdLoaded()
@@ -37,13 +37,11 @@ class FavouriteFragment : BaseFragment() {
 
             override fun onAdClosed() {
                 println("onAdClosed")
-
                 super.onAdClosed()
             }
 
             override fun onAdClicked() {
                 println("onAdClicked")
-
                 super.onAdClicked()
             }
 
