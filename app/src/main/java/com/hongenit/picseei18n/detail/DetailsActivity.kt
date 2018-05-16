@@ -1,45 +1,42 @@
 package com.hongenit.picseei18n.detail
 
 import android.Manifest
+import android.content.Intent
+import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.drawable.BitmapDrawable
+import android.net.Uri
 import android.os.Bundle
 import android.os.Environment
+import android.support.v4.app.ActivityCompat
+import android.support.v4.content.ContextCompat
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.View
 import android.view.ViewGroup
-import android.widget.AbsListView
-import com.hongenit.picseei18n.BaseActivity
-import com.hongenit.picseei18n.R
-import com.hongenit.picseei18n.picClassify.commontab.KEY_ARGUMENTS_PHOTOS
-import gallerylibrary.CardAdapterHelper
-import gallerylibrary.CardScaleHelper
-import kotlinx.android.synthetic.main.activity_details.*
-import kotlinx.android.synthetic.main.item_image_details.view.*
-import kotlinx.android.synthetic.main.layout_toolbar.*
-import java.io.IOException
-import java.net.HttpURLConnection
-import java.net.URL
-import android.content.Intent
-import android.content.pm.PackageManager
-import android.graphics.drawable.Drawable
-import android.net.Uri
-import android.support.v4.app.ActivityCompat
-import android.support.v4.content.ContextCompat
 import android.view.Window
 import android.view.WindowManager
 import com.google.android.gms.ads.AdListener
 import com.google.android.gms.ads.AdRequest
-import com.google.android.gms.ads.AdView
-import com.hongenit.picseei18n.Constants
+import com.hongenit.picseei18n.BaseActivity
 import com.hongenit.picseei18n.DataModel
-import com.hongenit.picseei18n.db.SqliteDBImpl
-import com.hongenit.picseei18n.util.*
+import com.hongenit.picseei18n.R
+import com.hongenit.picseei18n.picClassify.commontab.KEY_ARGUMENTS_PHOTOS
+import com.hongenit.picseei18n.util.ImageLoadUtil
+import com.hongenit.picseei18n.util.LogUtil
+import com.hongenit.picseei18n.util.ToastUtil
+import com.hongenit.picseei18n.util.Utils
+import gallerylibrary.CardAdapterHelper
+import gallerylibrary.CardScaleHelper
+import kotlinx.android.synthetic.main.activity_details.*
+import kotlinx.android.synthetic.main.item_image_details.view.*
 import java.io.BufferedOutputStream
 import java.io.File
 import java.io.FileOutputStream
+import java.io.IOException
+import java.net.HttpURLConnection
+import java.net.URL
 
 
 /**
@@ -191,7 +188,7 @@ class DetailsActivity : BaseActivity(), DataModel.FavouriteListChangedListener {
      *
      * @param imageUri
      * @return
-     * @throws MalformedURLException
+     * @throws
      */
     fun getbitmap(imageUri: String): Bitmap? {
         // 显示网络上的图片
@@ -297,9 +294,7 @@ class DetailsActivity : BaseActivity(), DataModel.FavouriteListChangedListener {
                 if (ActivityCompat.shouldShowRequestPermissionRationale(this@DetailsActivity,
                                 Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
 
-                    // Show an expanation to the user *asynchronously* -- don't block
-                    // this thread waiting for the user's response! After the user
-                    // sees the explanation, try again to request the permission.
+                    ToastUtil.showToast(getString(R.string.sdcard_permission))
 
                 } else {
 

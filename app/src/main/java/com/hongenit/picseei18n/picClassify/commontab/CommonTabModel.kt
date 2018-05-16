@@ -1,7 +1,9 @@
 package com.hongenit.picseei18n.picClassify.commontab
 
+import android.os.Bundle
 import com.hongenit.picseei18n.net.ResponseListener
 import com.hongenit.picseei18n.net.WebServiceImpl
+import com.hongenit.picseei18n.util.EventUtil
 import java.util.*
 
 /**
@@ -13,10 +15,6 @@ import java.util.*
 private val TAG: String = "CommonTabModel"
 
 
-//http://www.win4000.com/wallpaper_192_0_0_1.html
-const val WEBSITE_PREFIX_MSGAO = "http://www.msgao"
-const val WEBSITE_PREFIX_WIN4000 = "http://www.win4000"
-
 class CommonTabModel() {
     val webservice = WebServiceImpl()
 
@@ -27,8 +25,10 @@ class CommonTabModel() {
     }
 
     fun reqOutList(url: String, page: Int, response: ResponseListener) {
-//        val urlWithParam = url + "&page=" + page + "&country=" + Locale.getDefault().country
-        val urlWithParam = url + "&page=" + page + "&country=IN"
+        val urlWithParam = url + "&page=" + page + "&country=" + Locale.getDefault().country
+        val bundle = Bundle()
+        bundle.putString(EventUtil.FirebaseEventParams.urlWithParam, urlWithParam)
+        EventUtil.request_classify()
         webservice.getAlbumInfoList(urlWithParam, response)
     }
 

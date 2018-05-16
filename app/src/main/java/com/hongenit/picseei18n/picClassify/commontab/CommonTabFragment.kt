@@ -107,8 +107,13 @@ class CommonTabFragment : BaseFragment() {
             val albumBean = mPicList[pos]
             val intent = Intent(context, DetailsActivity::class.java)
             intent.putExtra(KEY_ARGUMENTS_PHOTOS, albumBean.albumPhotoList)
-            EventUtil.tab_url_click(mUrl)
-            EventUtil.detail_url_click(albumBean.albumUrl)
+
+            val bundle = Bundle()
+            bundle.putString(EventUtil.FirebaseEventParams.albumUrl, albumBean.albumUrl)
+            bundle.putString(EventUtil.FirebaseEventParams.tabUrl, mUrl)
+            bundle.putString(EventUtil.FirebaseEventParams.thumbnailUrl, albumBean.thumbnailUrl)
+            EventUtil.album_to_detail_click(bundle)
+
             context.startActivity(intent)
         }
 

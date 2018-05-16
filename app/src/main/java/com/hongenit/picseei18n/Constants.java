@@ -26,6 +26,7 @@ public interface Constants {
     String ADMOB_APP_ID = "ca-app-pub-1616641096587052~3240065845";
     // admob ID of banner 1
     String ADMOB_banner_ID1 = "ca-app-pub-1616641096587052/7393690000";
+    String ADMOB_banner_ID2 = "ca-app-pub-1616641096587052/3250719842";
 
     @NotNull
     String SDK_VERSION = String.valueOf(Build.VERSION.SDK_INT);

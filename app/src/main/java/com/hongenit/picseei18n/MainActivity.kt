@@ -8,6 +8,7 @@ import android.view.View
 import com.google.android.gms.ads.MobileAds
 import com.hongenit.picseei18n.favourites.FavouritesActivity
 import com.hongenit.picseei18n.picClassify.StyleClassifyFragment
+import com.hongenit.picseei18n.util.EventUtil
 import com.hongenit.picseei18n.util.LogUtil
 import com.hongenit.picseei18n.util.Utils
 import kotlinx.android.synthetic.main.activity_main.*
@@ -19,20 +20,29 @@ class MainActivity : BaseActivity(), View.OnClickListener {
             tv_menu_item1 -> {
                 val intent = Intent(this@MainActivity, FavouritesActivity::class.java)
                 startActivity(intent)
+                EventUtil.menu_click_favorites()
             }
 
             tv_menu_item2 -> {
                 Utils.feedback(this@MainActivity, getString(R.string.feedback_title), getString(R.string.feedback_email))
+                EventUtil.menu_click_feedback()
+            }
+
+            tv_menu_item3 -> {
+                EventUtil.menu_click_setting()
             }
 
             close_menu -> {
-                if (drawer_layout.isDrawerOpen(rl_menu))
+                if (drawer_layout.isDrawerOpen(rl_menu)) {
                     drawer_layout.closeDrawer(rl_menu)
+                    EventUtil.drawer_close_btn_click()
+                }
             }
 
             ib_open_drawer -> {
                 if (!drawer_layout.isDrawerOpen(rl_menu)) {
                     drawer_layout.openDrawer(rl_menu)
+                    EventUtil.drawer_open_btn_click()
                 }
             }
 
@@ -86,16 +96,23 @@ class MainActivity : BaseActivity(), View.OnClickListener {
 
             override fun onDrawerClosed(drawerView: View?) {
                 LogUtil.i(TAG, "onDrawerClosed")
+                val bundle = Bundle()
+                bundle.putString(EventUtil.FirebaseEventParams.drawer_close, "onDrawerClosed")
+                EventUtil.drawer_action(bundle)
             }
 
             override fun onDrawerOpened(drawerView: View?) {
                 LogUtil.i(TAG, "onDrawerOpened")
+                val bundle = Bundle()
+                bundle.putString(EventUtil.FirebaseEventParams.drawer_open, "onDrawerOpened")
+                EventUtil.drawer_action(bundle)
             }
         })
 
 
         tv_menu_item1.setOnClickListener(this)
         tv_menu_item2.setOnClickListener(this)
+        tv_menu_item3.setOnClickListener(this)
         close_menu.setOnClickListener(this)
 
 

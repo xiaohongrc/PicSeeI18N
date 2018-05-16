@@ -1,9 +1,13 @@
 package com.hongenit.picseei18n.favourites
 
+import android.view.View
+import com.google.android.gms.ads.AdListener
+import com.google.android.gms.ads.AdRequest
 import com.hongenit.picseei18n.DataModel
 import com.hongenit.picseei18n.R
 import com.hongenit.picseei18n.db.SqliteDBImpl
 import com.hongenit.picseei18n.picClassify.BaseFragment
+import kotlinx.android.synthetic.main.activity_details.*
 import kotlinx.android.synthetic.main.fragment_favourite.*
 import java.io.BufferedReader
 import java.io.InputStreamReader
@@ -19,34 +23,41 @@ class FavouriteFragment : BaseFragment() {
 
     override fun initView() {
         vp_favourites.adapter = FavouriteAdapter(context)
+        initAdmob()
+    }
+
+    private fun initAdmob() {
+        val adRequest = AdRequest.Builder().build()
+        adView.loadAd(adRequest)
+        adView.adListener = object : AdListener() {
+            override fun onAdLoaded() {
+                println("onAdLoaded")
+                super.onAdLoaded()
+            }
+
+            override fun onAdClosed() {
+                println("onAdClosed")
+
+                super.onAdClosed()
+            }
+
+            override fun onAdClicked() {
+                println("onAdClicked")
+
+                super.onAdClicked()
+            }
+
+            override fun onAdFailedToLoad(p0: Int) {
+                println("onAdFailedToLoad code = " + p0)
+                super.onAdFailedToLoad(p0)
+            }
+
+        }
     }
 
     override fun initData() {
         (vp_favourites.adapter as FavouriteAdapter).setData(DataModel.getInstance().mFavouritePics)
-
-
-//        val arrayList: ArrayList<String> = arrayListOf()
-
-//        val bufferedReader = BufferedReader(InputStreamReader(resources.openRawResource(R.raw.imgurls)))
-//
-//        var line = ""
-//        try {
-//            while (true) {
-//                line = bufferedReader.readLine() ?: break
-//                arrayList.add(line)
-//                println("line = " + line)
-//            }
-//            (vp_favourites.adapter as FavouriteAdapter).setData(arrayList)
-//        } catch (e: Exception) {
-//            println(e)
-//        } finally {
-//            try {
-//                bufferedReader.close()
-//            } catch (e: Exception) {
-//                println(e)
-//            }
-//        }
-
+        mEmptyView.visibility = if (vp_favourites.adapter.count > 0) View.GONE else View.VISIBLE
     }
 }
 

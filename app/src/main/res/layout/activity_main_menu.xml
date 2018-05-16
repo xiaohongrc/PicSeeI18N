@@ -15,10 +15,12 @@
         android:id="@+id/ll_head"
         android:layout_width="match_parent"
         android:layout_height="250dip"
-        android:background="@color/colorPrimary"
-        android:gravity="bottom"
+        android:layout_margin="-20dp"
+        android:background="@drawable/ic_launcher_background"
+        android:gravity="center_vertical"
         android:orientation="vertical"
-        android:padding="20dp">
+        android:paddingLeft="20dp"
+        android:paddingStart="20dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -26,23 +28,38 @@
             android:gravity="center_vertical"
             android:orientation="vertical">
 
+            <ImageView
+                android:layout_width="@dimen/menu_icon_size"
+                android:layout_height="@dimen/menu_icon_size"
+                android:src="@mipmap/ic_launcher" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/app_name"
+                android:textColor="@color/black"
                 android:textSize="28sp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/version"
-                android:textSize="20sp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/app_version"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="16sp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginRight="5dp"
+                    android:text="@string/version"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/app_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
 
         </LinearLayout>
 
@@ -66,11 +83,15 @@
         android:layout_below="@id/ll_head"
         android:orientation="vertical">
 
+
         <TextView
             android:id="@+id/tv_menu_item1"
             style="@style/menu_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_favour_16dp"
+            android:drawablePadding="6dp"
+            android:drawableStart="@drawable/ic_favour_16dp"
             android:text="@string/drawer_item_favourite" />
 
         <View
@@ -83,6 +104,9 @@
             style="@style/menu_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/menu_feedback"
+            android:drawablePadding="8dp"
+            android:drawableStart="@drawable/menu_feedback"
             android:text="@string/drawer_item_feed_back" />
 
         <View
@@ -95,6 +119,9 @@
             style="@style/menu_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/menu_setting"
+            android:drawablePadding="6dp"
+            android:drawableStart="@drawable/menu_setting"
             android:text="@string/drawer_item3" />
 
         <View
