@@ -3,7 +3,7 @@
     <string name="feedback_message">Application version : %1$s \n SDK Version : %2$s \n ---------Please do not delete these messages ------- \n</string>
     <string name="feedback_email">hongenit@126.com</string>
 
-
+    <!-- need to i18n -->
     <string name="msg_get_data_error">Load data failed</string>
     <string name="load_image_error">Load picture failed</string>
     <string name="no_more_data">No more data</string>
@@ -27,6 +27,7 @@
     <string name="drawer_item3">Setting</string>
     <string name="feedback_title">I have problem</string>
     <string name="sdcard_permission">You should give us this permission,if you want save this picture to sdcard.</string>
+    <string name="favour_success">Favour success</string>
 
 
 </resources>

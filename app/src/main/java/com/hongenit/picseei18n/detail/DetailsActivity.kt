@@ -279,6 +279,7 @@ class DetailsActivity : BaseActivity(), DataModel.FavouriteListChangedListener {
                 bundle.putString(EventUtil.FirebaseEventParams.picUrl, picUrl)
                 EventUtil.detail_photo_favour(bundle)
                 DataModel.getInstance().insertFavouritePic(picBean)
+                ToastUtil.showToast(getString(R.string.favour_success))
             }
 
         }
