@@ -57,11 +57,10 @@ object EventUtil {
         onEvent("album_to_detail_click", bundle)
     }
 
-    // detail_photo_click
-    fun detail_photo_click(bundle: Bundle?) {
-        onEvent("detail_photo_click",bundle)
+    // detail_photo_favour
+    fun detail_photo_favour(bundle: Bundle?) {
+        onEvent("detail_photo_favour", bundle)
     }
-
 
 
 /*
@@ -99,6 +98,7 @@ object EventUtil {
         val albumUrl: String? = "albumUrl"
         val tabUrl: String? = "tabUrl"
         val thumbnailUrl: String? = "thumbnailUrl"
+        val picUrl: String? = "picUrl"
 
     }
 
