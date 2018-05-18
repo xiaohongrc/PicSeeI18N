@@ -4,8 +4,10 @@ import android.os.Build;
 import android.os.Environment;
 
 import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 import java.io.File;
+import java.util.Locale;
 
 /**
  * Created by hongenit on 2018/2/4.
@@ -30,4 +32,8 @@ public interface Constants {
 
     @NotNull
     String SDK_VERSION = String.valueOf(Build.VERSION.SDK_INT);
+    @Nullable
+    String LOCALE_COUNTRY = Locale.getDefault().getCountry();
+    @NotNull
+    String LOCALE_LANGUAGE = Locale.getDefault().getLanguage();
 }

@@ -20,6 +20,7 @@ import android.view.WindowManager
 import com.google.android.gms.ads.AdListener
 import com.google.android.gms.ads.AdRequest
 import com.hongenit.picseei18n.BaseActivity
+import com.hongenit.picseei18n.Constants
 import com.hongenit.picseei18n.DataModel
 import com.hongenit.picseei18n.R
 import com.hongenit.picseei18n.picClassify.commontab.KEY_ARGUMENTS_PHOTOS
@@ -275,9 +276,11 @@ class DetailsActivity : BaseActivity(), DataModel.FavouriteListChangedListener {
             if (position < mPicList.size) {
                 val picUrl = mPicList[position].url
                 val picBean = PicBean(picUrl, System.currentTimeMillis())
-                val bundle = Bundle()
-                bundle.putString(EventUtil.FirebaseEventParams.picUrl, picUrl)
-                EventUtil.detail_photo_favour(bundle)
+                val hashMap = hashMapOf<String, String?>()
+                if (Constants.LOCALE_COUNTRY != null) {
+                    hashMap.put(Constants.LOCALE_COUNTRY, picUrl)
+                }
+                EventUtil.detail_photo_favour(hashMap)
                 DataModel.getInstance().insertFavouritePic(picBean)
                 ToastUtil.showToast(getString(R.string.favour_success))
             }

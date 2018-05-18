@@ -2,6 +2,7 @@ package com.hongenit.picseei18n
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import com.umeng.analytics.MobclickAgent
 
 /**
  * Created by hongenit on 2018/2/4.
@@ -12,5 +13,15 @@ abstract class BaseActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
     }
 
+
+    override fun onResume() {
+        super.onResume()
+        MobclickAgent.onResume(this)
+    }
+
+    override fun onPause() {
+        super.onPause()
+        MobclickAgent.onPause(this)
+    }
 
 }

@@ -8,6 +8,7 @@ import android.view.View
 import com.google.android.gms.ads.MobileAds
 import com.hongenit.picseei18n.favourites.FavouritesActivity
 import com.hongenit.picseei18n.picClassify.StyleClassifyFragment
+import com.hongenit.picseei18n.setting.SettingActivity
 import com.hongenit.picseei18n.util.EventUtil
 import com.hongenit.picseei18n.util.LogUtil
 import com.hongenit.picseei18n.util.Utils
@@ -29,6 +30,7 @@ class MainActivity : BaseActivity(), View.OnClickListener {
             }
 
             tv_menu_item3 -> {
+                startActivity(Intent(this@MainActivity, SettingActivity::class.java))
                 EventUtil.menu_click_setting()
             }
 
@@ -96,16 +98,16 @@ class MainActivity : BaseActivity(), View.OnClickListener {
 
             override fun onDrawerClosed(drawerView: View?) {
                 LogUtil.i(TAG, "onDrawerClosed")
-                val bundle = Bundle()
-                bundle.putString(EventUtil.FirebaseEventParams.drawer_close, "onDrawerClosed")
-                EventUtil.drawer_action(bundle)
+                val hashMap: HashMap<String, String?>? = hashMapOf()
+                hashMap?.put(EventUtil.FirebaseEventParams.drawer_close, "onDrawerClosed")
+                EventUtil.drawer_action(hashMap)
             }
 
             override fun onDrawerOpened(drawerView: View?) {
                 LogUtil.i(TAG, "onDrawerOpened")
-                val bundle = Bundle()
-                bundle.putString(EventUtil.FirebaseEventParams.drawer_open, "onDrawerOpened")
-                EventUtil.drawer_action(bundle)
+                val hashMap: HashMap<String, String?>? = hashMapOf()
+                hashMap?.put(EventUtil.FirebaseEventParams.drawer_open, "onDrawerOpened")
+                EventUtil.drawer_action(hashMap)
             }
         })
 

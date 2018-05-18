@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+  <string name="app_name">Sexy Schönheit Tapete</string>
+  <string name="msg_get_data_error">Ladedaten fehlgeschlagen</string>
+  <string name="load_image_error">Bild laden fehlgeschlagen</string>
+  <string name="no_more_data">Keine weiteren Daten</string>
+  <string name="classify_mingxing">Berühmtheit</string>
+  <string name="classify_meinv">Schönheit</string>
+  <string name="classify_fengjing">Landschaft</string>
+  <string name="classify_qiche">Auto</string>
+  <string name="classify_dongman">Anime</string>
+  <string name="classify_dongwu">Tier</string>
+  <string name="classify_zhiwu">Vegetation</string>
+  <string name="classify_tiyu">Sport</string>
+  <string name="classify_meishi">Lebensmittel</string>
+  <string name="download_success">Download-Erfolg</string>
+  <string name="contact_me">Bei Fragen kontaktieren Sie uns bitte:</string>
+  <string name="version">Ausführung:</string>
+  <string name="drawer_item_favourite">Lieblingsbilder</string>
+  <string name="drawer_item_feed_back">Feedback</string>
+  <string name="drawer_setting">Rahmen</string>
+  <string name="feedback_title">ich habe ein Problem</string>
+  <string name="sdcard_permission">Sie sollten uns diese Erlaubnis geben, wenn Sie dieses Bild auf SD-Karte speichern möchten.</string>
+  <string name="favour_success">Favour Erfolg</string>
+  <string name="download_path">Downloadpfad:</string>
+</resources>

@@ -1,19 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <resources>
-    <string name="msg_get_data_error">获取数据失败</string>
-    <string name="load_image_error">加载图片失败</string>
-    <string name="no_more_data">没有更多数据了</string>
-
-
-    <string name="classify_mingxing">明星</string>
-    <string name="classify_meinv">美女</string>
-    <string name="classify_fengjing">风景</string>
-    <string name="classify_qiche">汽车</string>
-    <string name="classify_dongman">动漫</string>
-    <string name="classify_dongwu">动物</string>
-    <string name="classify_zhiwu">植物</string>
-    <string name="classify_tiyu">体育</string>
-    <string name="classify_meishi">美食</string>
-    <string name="download_success">保存成功</string>
-
-
+  <string name="app_name">性感美女壁紙</string>
+  <string name="msg_get_data_error">加載數據失敗</string>
+  <string name="load_image_error">加載圖片失敗</string>
+  <string name="no_more_data">沒有更多的數據</string>
+  <string name="classify_mingxing">明星</string>
+  <string name="classify_meinv">美女</string>
+  <string name="classify_fengjing">風景</string>
+  <string name="classify_qiche">汽車</string>
+  <string name="classify_dongman">動漫</string>
+  <string name="classify_dongwu">動物</string>
+  <string name="classify_zhiwu">植物</string>
+  <string name="classify_tiyu">體育</string>
+  <string name="classify_meishi">美食</string>
+  <string name="download_success">下載成功</string>
+  <string name="contact_me">有任何問題請聯繫我們：</string>
+  <string name="version">版本：</string>
+  <string name="drawer_item_favourite">喜歡的圖片</string>
+  <string name="drawer_item_feed_back">反饋</string>
+  <string name="drawer_setting">設置</string>
+  <string name="feedback_title">我有問題</string>
+  <string name="sdcard_permission">你應該給我們這個權限，如果你想保存這張照片到SD卡。</string>
+  <string name="favour_success">喜歡成功</string>
+  <string name="download_path">下載路徑：</string>
 </resources>

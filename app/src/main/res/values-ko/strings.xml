@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+  <string name="app_name">섹시한 아름다움 벽지</string>
+  <string name="msg_get_data_error">데이터로드 실패</string>
+  <string name="load_image_error">그림로드 실패</string>
+  <string name="no_more_data">데이터가 더 이상 없음</string>
+  <string name="classify_mingxing">명성</string>
+  <string name="classify_meinv">아름다움</string>
+  <string name="classify_fengjing">풍경</string>
+  <string name="classify_qiche">차</string>
+  <string name="classify_dongman">애니메이션</string>
+  <string name="classify_dongwu">동물</string>
+  <string name="classify_zhiwu">초목</string>
+  <string name="classify_tiyu">스포츠</string>
+  <string name="classify_meishi">식품</string>
+  <string name="download_success">다운로드 성공</string>
+  <string name="contact_me">궁금한 점이 있으시면 언제든지 문의 해주십시오.</string>
+  <string name="version">번역:</string>
+  <string name="drawer_item_favourite">좋아하는 사진</string>
+  <string name="drawer_item_feed_back">피드백</string>
+  <string name="drawer_setting">환경</string>
+  <string name="feedback_title">나는 문제가있다.</string>
+  <string name="sdcard_permission">이 그림을 sdcard에 저장하려면이 권한을 제공해야합니다.</string>
+  <string name="favour_success">호의적 인 성공</string>
+  <string name="download_path">다운로드 경로 :</string>
+</resources>

@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.StaggeredGridLayoutManager
 import android.view.View
 import android.view.ViewGroup
+import com.hongenit.picseei18n.Constants
 import com.hongenit.picseei18n.R
 import com.hongenit.picseei18n.picClassify.AlbumBean
 import com.hongenit.picseei18n.picClassify.BaseFragment
@@ -108,11 +109,11 @@ class CommonTabFragment : BaseFragment() {
             val intent = Intent(context, DetailsActivity::class.java)
             intent.putExtra(KEY_ARGUMENTS_PHOTOS, albumBean.albumPhotoList)
 
-            val bundle = Bundle()
-            bundle.putString(EventUtil.FirebaseEventParams.albumUrl, albumBean.albumUrl)
-            bundle.putString(EventUtil.FirebaseEventParams.tabUrl, mUrl)
-            bundle.putString(EventUtil.FirebaseEventParams.thumbnailUrl, albumBean.thumbnailUrl)
-            EventUtil.album_to_detail_click(bundle)
+            val hashMap = hashMapOf<String, String?>()
+            if (Constants.LOCALE_COUNTRY != null) {
+                hashMap.put(Constants.LOCALE_COUNTRY, albumBean.thumbnailUrl)
+            }
+            EventUtil.album_to_detail_click(hashMap)
 
             context.startActivity(intent)
         }
@@ -138,7 +139,12 @@ class CommonTabFragment : BaseFragment() {
             homeViewHolder.itemView.layoutParams = layoutParams
             var picBean = mPicList[position]
             ImageLoadUtil.newInstance()?.loadImage(context, homeViewHolder.itemView.ivGirlImage, picBean.thumbnailUrl)
-            homeViewHolder.itemView.tvImageTitle.text = picBean.title
+            if (Constants.LOCALE_LANGUAGE.toLowerCase().contains("zh")) {
+                homeViewHolder.itemView.tvImageTitle.visibility = View.VISIBLE
+                homeViewHolder.itemView.tvImageTitle.text = picBean.title
+            } else {
+                homeViewHolder.itemView.tvImageTitle.visibility = View.GONE
+            }
         }
 
         inner class HomeViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+  <string name="app_name">خلفية الجمال مثير</string>
+  <string name="msg_get_data_error">فشل تحميل البيانات</string>
+  <string name="load_image_error">فشل تحميل الصورة</string>
+  <string name="no_more_data">لا مزيد من البيانات</string>
+  <string name="classify_mingxing">نجاح كبير</string>
+  <string name="classify_meinv">جمال</string>
+  <string name="classify_fengjing">مشهد</string>
+  <string name="classify_qiche">سيارة</string>
+  <string name="classify_dongman">أنيمي</string>
+  <string name="classify_dongwu">حيوان</string>
+  <string name="classify_zhiwu">الحياة النباتية</string>
+  <string name="classify_tiyu">رياضات</string>
+  <string name="classify_meishi">طعام</string>
+  <string name="download_success">تحميل النجاح</string>
+  <string name="contact_me">أي أسئلة، يرجى الاتصال بنا:</string>
+  <string name="version">الإصدار:</string>
+  <string name="drawer_item_favourite">الصور المفضلة</string>
+  <string name="drawer_item_feed_back">ردود الفعل</string>
+  <string name="drawer_setting">ضبط</string>
+  <string name="feedback_title">انا لدي مشكلة</string>
+  <string name="sdcard_permission">يجب أن تعطينا هذا الإذن ، إذا كنت تريد حفظ هذه الصورة إلى sdcard.</string>
+  <string name="favour_success">تفضل النجاح</string>
+  <string name="download_path">مسار التنزيل:</string>
+</resources>

@@ -5,6 +5,7 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.umeng.analytics.MobclickAgent
 
 
 /**
@@ -34,14 +35,14 @@ abstract class BaseFragment : Fragment() {
 
     abstract fun initData()
 
-
     override fun onResume() {
         super.onResume()
+        MobclickAgent.onPageStart(javaClass.name) //统计页面，"MainScreen"为页面名称，可自定义
     }
 
     override fun onPause() {
         super.onPause()
+        MobclickAgent.onPageEnd(javaClass.name)
     }
-
 
 }

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+  <string name="app_name">Kertas dinding kecantikan seksi</string>
+  <string name="msg_get_data_error">Beban data gagal</string>
+  <string name="load_image_error">Muatkan gambar gagal</string>
+  <string name="no_more_data">Tiada lagi data</string>
+  <string name="classify_mingxing">selebriti</string>
+  <string name="classify_meinv">kecantikan</string>
+  <string name="classify_fengjing">pemandangan</string>
+  <string name="classify_qiche">kereta</string>
+  <string name="classify_dongman">anime</string>
+  <string name="classify_dongwu">haiwan</string>
+  <string name="classify_zhiwu">tumbuhan</string>
+  <string name="classify_tiyu">sukan</string>
+  <string name="classify_meishi">makanan</string>
+  <string name="download_success">Muat turun kejayaan</string>
+  <string name="contact_me">Sebarang pertanyaan sila hubungi kami:</string>
+  <string name="version">Versi:</string>
+  <string name="drawer_item_favourite">Gambar kegemaran</string>
+  <string name="drawer_item_feed_back">Makan kembali</string>
+  <string name="drawer_setting">Menetapkan</string>
+  <string name="feedback_title">saya ada masalah</string>
+  <string name="sdcard_permission">Anda harus memberi kami kebenaran ini, jika anda mahu menyimpan gambar ini ke sdcard.</string>
+  <string name="favour_success">Kejayaan memihak</string>
+  <string name="download_path">Laluan muat turun:</string>
+</resources>

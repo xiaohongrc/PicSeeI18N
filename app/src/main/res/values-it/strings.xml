@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+  <string name="app_name">Carta da parati sexy di bellezza</string>
+  <string name="msg_get_data_error">Caricare i dati falliti</string>
+  <string name="load_image_error">Carica immagine fallita</string>
+  <string name="no_more_data">Niente più dati</string>
+  <string name="classify_mingxing">celebrità</string>
+  <string name="classify_meinv">bellezza</string>
+  <string name="classify_fengjing">scenario</string>
+  <string name="classify_qiche">auto</string>
+  <string name="classify_dongman">anime</string>
+  <string name="classify_dongwu">animale</string>
+  <string name="classify_zhiwu">vegetazione</string>
+  <string name="classify_tiyu">gli sport</string>
+  <string name="classify_meishi">cibo</string>
+  <string name="download_success">Scarica il successo</string>
+  <string name="contact_me">Per qualsiasi domanda, la preghiamo di contattarci:</string>
+  <string name="version">Versione:</string>
+  <string name="drawer_item_favourite">Foto preferite</string>
+  <string name="drawer_item_feed_back">Risposta</string>
+  <string name="drawer_setting">Ambientazione</string>
+  <string name="feedback_title">ho un problema</string>
+  <string name="sdcard_permission">Dovresti darci questa autorizzazione, se vuoi salvare questa immagine su sdcard.</string>
+  <string name="favour_success">Favorisci il successo</string>
+  <string name="download_path">Percorso di download:</string>
+</resources>

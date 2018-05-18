@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+  <string name="app_name">सेक्सी सौंदर्य वॉलपेपर</string>
+  <string name="msg_get_data_error">लोड डेटा असफल रहा</string>
+  <string name="load_image_error">लोड तस्वीर असफल रही</string>
+  <string name="no_more_data">कोई और डेटा नहीं</string>
+  <string name="classify_mingxing">सेलिब्रिटी</string>
+  <string name="classify_meinv">सुंदरता</string>
+  <string name="classify_fengjing">दृश्यों</string>
+  <string name="classify_qiche">गाड़ी</string>
+  <string name="classify_dongman">एनिमी</string>
+  <string name="classify_dongwu">जानवर</string>
+  <string name="classify_zhiwu">वनस्पतियां</string>
+  <string name="classify_tiyu">खेल</string>
+  <string name="classify_meishi">भोजन</string>
+  <string name="download_success">सफलता डाउनलोड करें</string>
+  <string name="contact_me">कोई भी प्रश्न हो, तो कृपया हमसे संपर्क करें:</string>
+  <string name="version">संस्करण:</string>
+  <string name="drawer_item_favourite">पसंदीदा तस्वीरें</string>
+  <string name="drawer_item_feed_back">प्रतिक्रिया</string>
+  <string name="drawer_setting">सेटिंग</string>
+  <string name="feedback_title">मुझे समस्या हैं</string>
+  <string name="sdcard_permission">यदि आप इस तस्वीर को एसडीकार्ड में सहेजना चाहते हैं तो आपको हमें यह अनुमति देनी चाहिए।</string>
+  <string name="favour_success">सफलता का पक्ष लें</string>
+  <string name="download_path">पथ डाउनलोड करें:</string>
+</resources>

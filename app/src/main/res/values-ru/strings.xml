@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+  <string name="app_name">Cексуальная красота обои</string>
+  <string name="msg_get_data_error">Ошибка загрузки данных</string>
+  <string name="load_image_error">Не удалось загрузить изображение</string>
+  <string name="no_more_data">Больше нет данных</string>
+  <string name="classify_mingxing">знаменитость</string>
+  <string name="classify_meinv">красота</string>
+  <string name="classify_fengjing">декорации</string>
+  <string name="classify_qiche">автомобиль</string>
+  <string name="classify_dongman">аниме</string>
+  <string name="classify_dongwu">животное</string>
+  <string name="classify_zhiwu">растительность</string>
+  <string name="classify_tiyu">виды спорта</string>
+  <string name="classify_meishi">питание</string>
+  <string name="download_success">Скачать успех</string>
+  <string name="contact_me">Любые вопросы, пожалуйста, свяжитесь с нами:</string>
+  <string name="version">Версия:</string>
+  <string name="drawer_item_favourite">Избранные фотографии</string>
+  <string name="drawer_item_feed_back">Обратная связь</string>
+  <string name="drawer_setting">настройка</string>
+  <string name="feedback_title">у меня есть проблема</string>
+  <string name="sdcard_permission">Вы должны предоставить нам это разрешение, если хотите сохранить эту фотографию на SDCard.</string>
+  <string name="favour_success">Благоприятный успех</string>
+  <string name="download_path">Путь загрузки:</string>
+</resources>

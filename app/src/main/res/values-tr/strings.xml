@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+  <string name="app_name">Seksi güzellik duvar kağıdı</string>
+  <string name="msg_get_data_error">Veri yüklenemedi</string>
+  <string name="load_image_error">Resim yüklenemedi</string>
+  <string name="no_more_data">Daha fazla veri yok</string>
+  <string name="classify_mingxing">şöhret</string>
+  <string name="classify_meinv">güzellik</string>
+  <string name="classify_fengjing">manzara</string>
+  <string name="classify_qiche">araba</string>
+  <string name="classify_dongman">anime</string>
+  <string name="classify_dongwu">hayvan</string>
+  <string name="classify_zhiwu">bitki örtüsü</string>
+  <string name="classify_tiyu">Spor Dalları</string>
+  <string name="classify_meishi">Gıda</string>
+  <string name="download_success">Başarıyı indir</string>
+  <string name="contact_me">Sorularınız için lütfen bizimle temas kurun:</string>
+  <string name="version">Versiyon:</string>
+  <string name="drawer_item_favourite">En sevdiğim resimler</string>
+  <string name="drawer_item_feed_back">Geri bildirim</string>
+  <string name="drawer_setting">Ayar</string>
+  <string name="feedback_title">Bir sorunum var</string>
+  <string name="sdcard_permission">Bu resmi sdcard'a kaydetmek istiyorsanız bize bu izni vermelisiniz.</string>
+  <string name="favour_success">Favor başarısı</string>
+  <string name="download_path">Indirme yolu:</string>
+</resources>

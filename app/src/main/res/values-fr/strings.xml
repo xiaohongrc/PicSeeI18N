@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+  <string name="app_name">Fond d'écran de beauté sexy</string>
+  <string name="msg_get_data_error">Charger les données a échoué</string>
+  <string name="load_image_error">Charger l'image a échoué</string>
+  <string name="no_more_data">Plus de données</string>
+  <string name="classify_mingxing">célébrité</string>
+  <string name="classify_meinv">beauté</string>
+  <string name="classify_fengjing">paysage</string>
+  <string name="classify_qiche">voiture</string>
+  <string name="classify_dongman">anime</string>
+  <string name="classify_dongwu">animal</string>
+  <string name="classify_zhiwu">végétation</string>
+  <string name="classify_tiyu">des sports</string>
+  <string name="classify_meishi">aliments</string>
+  <string name="download_success">Télécharger le succès</string>
+  <string name="contact_me">Toutes les questions s'il vous plaît nous contacter:</string>
+  <string name="version">Version:</string>
+  <string name="drawer_item_favourite">Photos favorites</string>
+  <string name="drawer_item_feed_back">Retour d'information</string>
+  <string name="drawer_setting">Réglage</string>
+  <string name="feedback_title">j'ai un problème</string>
+  <string name="sdcard_permission">Vous devriez nous donner cette autorisation, si vous voulez enregistrer cette image sur la carte SD.</string>
+  <string name="favour_success">Favoriser le succès</string>
+  <string name="download_path">Chemin de téléchargement:</string>
+</resources>

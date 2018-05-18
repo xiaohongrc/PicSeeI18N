@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">PicSeeSee</string>
     <string name="feedback_message">Application version : %1$s \n SDK Version : %2$s \n ---------Please do not delete these messages ------- \n</string>
     <string name="feedback_email">hongenit@126.com</string>
 
     <!-- need to i18n -->
+    <string name="app_name">Sexy beauty wallpaper</string>
     <string name="msg_get_data_error">Load data failed</string>
     <string name="load_image_error">Load picture failed</string>
     <string name="no_more_data">No more data</string>
@@ -14,20 +14,20 @@
     <string name="classify_qiche">car</string>
     <string name="classify_dongman">anime</string>
     <string name="classify_dongwu">animal</string>
-    <string name="classify_zhiwu">plant</string>
+    <string name="classify_zhiwu">vegetation</string>
     <string name="classify_tiyu">sports</string>
     <string name="classify_meishi">food</string>
 
     <string name="download_success">Download success</string>
     <string name="contact_me">Any questions please contact us:</string>
-    <string name="my_gmail">hognenit@gmail.com</string>
     <string name="version">Version:</string>
     <string name="drawer_item_favourite">Favourite pictures</string>
     <string name="drawer_item_feed_back">Feed back</string>
-    <string name="drawer_item3">Setting</string>
+    <string name="drawer_setting">Setting</string>
     <string name="feedback_title">I have problem</string>
     <string name="sdcard_permission">You should give us this permission,if you want save this picture to sdcard.</string>
     <string name="favour_success">Favour success</string>
+    <string name="download_path">Download path :</string>
 
 
 </resources>

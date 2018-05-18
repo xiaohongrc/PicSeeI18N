@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+  <string name="app_name">性感美女壁纸</string>
+  <string name="msg_get_data_error">加载数据失败</string>
+  <string name="load_image_error">加载图片失败</string>
+  <string name="no_more_data">没有更多的数据</string>
+  <string name="classify_mingxing">明星</string>
+  <string name="classify_meinv">美女</string>
+  <string name="classify_fengjing">风景</string>
+  <string name="classify_qiche">汽车</string>
+  <string name="classify_dongman">动漫</string>
+  <string name="classify_dongwu">动物</string>
+  <string name="classify_zhiwu">植物</string>
+  <string name="classify_tiyu">体育</string>
+  <string name="classify_meishi">美食</string>
+  <string name="download_success">下载成功</string>
+  <string name="contact_me">有任何问题请联系我们：</string>
+  <string name="version">版本：</string>
+  <string name="drawer_item_favourite">喜欢的图片</string>
+  <string name="drawer_item_feed_back">反馈</string>
+  <string name="drawer_setting">设置</string>
+  <string name="feedback_title">我有问题</string>
+  <string name="sdcard_permission">你应该给我们这个权限，如果你想保存这张照片到SD卡。</string>
+  <string name="favour_success">喜欢成功</string>
+  <string name="download_path">下载路径：</string>
+</resources>

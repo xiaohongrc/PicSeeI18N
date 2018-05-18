@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+  <string name="app_name">Papel de parede de beleza sexy</string>
+  <string name="msg_get_data_error">Carregar dados falhou</string>
+  <string name="load_image_error">Carregar imagem falhou</string>
+  <string name="no_more_data">Não há mais dados</string>
+  <string name="classify_mingxing">celebridade</string>
+  <string name="classify_meinv">beleza</string>
+  <string name="classify_fengjing">cenário</string>
+  <string name="classify_qiche">carro</string>
+  <string name="classify_dongman">anime</string>
+  <string name="classify_dongwu">animal</string>
+  <string name="classify_zhiwu">vegetação</string>
+  <string name="classify_tiyu">Esportes</string>
+  <string name="classify_meishi">Comida</string>
+  <string name="download_success">Sucesso de download</string>
+  <string name="contact_me">Qualquer dúvida entre em contato conosco:</string>
+  <string name="version">Versão:</string>
+  <string name="drawer_item_favourite">Fotos favoritas</string>
+  <string name="drawer_item_feed_back">Comentários</string>
+  <string name="drawer_setting">Configuração</string>
+  <string name="feedback_title">eu tenho um problema</string>
+  <string name="sdcard_permission">Você deve nos dar essa permissão, se você quiser salvar esta imagem para sdcard.</string>
+  <string name="favour_success">Favorecer o sucesso</string>
+  <string name="download_path">Caminho de download:</string>
+</resources>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+  <string name="app_name">セクシーな美しい壁紙</string>
+  <string name="msg_get_data_error">データのロードに失敗しました</string>
+  <string name="load_image_error">画像のロードに失敗しました</string>
+  <string name="no_more_data">データはこれ以上ありません</string>
+  <string name="classify_mingxing">有名人</string>
+  <string name="classify_meinv">美しさ</string>
+  <string name="classify_fengjing">風景</string>
+  <string name="classify_qiche">車</string>
+  <string name="classify_dongman">アニメ</string>
+  <string name="classify_dongwu">動物</string>
+  <string name="classify_zhiwu">植生</string>
+  <string name="classify_tiyu">スポーツ</string>
+  <string name="classify_meishi">フード</string>
+  <string name="download_success">ダウンロード成功</string>
+  <string name="contact_me">ご不明な点がございましたら、</string>
+  <string name="version">バージョン：</string>
+  <string name="drawer_item_favourite">好きな写真</string>
+  <string name="drawer_item_feed_back">フィードバック</string>
+  <string name="drawer_setting">設定</string>
+  <string name="feedback_title">私は問題がある</string>
+  <string name="sdcard_permission">この画像をsdcardに保存したい場合は、この許可を与える必要があります。</string>
+  <string name="favour_success">成功を賞賛する</string>
+  <string name="download_path">ダウンロードパス：</string>
+</resources>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+  <string name="app_name">Wallpaper kecantikan seksi</string>
+  <string name="msg_get_data_error">Muat data gagal</string>
+  <string name="load_image_error">Gagal memuat gambar</string>
+  <string name="no_more_data">Tidak ada lagi data</string>
+  <string name="classify_mingxing">selebriti</string>
+  <string name="classify_meinv">keindahan</string>
+  <string name="classify_fengjing">pemandangan</string>
+  <string name="classify_qiche">mobil</string>
+  <string name="classify_dongman">anime</string>
+  <string name="classify_dongwu">hewan</string>
+  <string name="classify_zhiwu">vegetasi</string>
+  <string name="classify_tiyu">olahraga</string>
+  <string name="classify_meishi">makanan</string>
+  <string name="download_success">Unduh kesuksesan</string>
+  <string name="contact_me">Jika ada pertanyaan tolong hubungi kami:</string>
+  <string name="version">Versi:</string>
+  <string name="drawer_item_favourite">Gambar favorit</string>
+  <string name="drawer_item_feed_back">Umpan balik</string>
+  <string name="drawer_setting">Pengaturan</string>
+  <string name="feedback_title">Saya punya masalah</string>
+  <string name="sdcard_permission">Anda harus memberi kami izin ini, jika Anda ingin menyimpan gambar ini ke sdcard.</string>
+  <string name="favour_success">Mendukung kesuksesan</string>
+  <string name="download_path">Jalur unduhan:</string>
+</resources>

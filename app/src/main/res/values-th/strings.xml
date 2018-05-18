@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+  <string name="app_name">วอลล์เปเปอร์ความงามเซ็กซี่</string>
+  <string name="msg_get_data_error">โหลดข้อมูลล้มเหลว</string>
+  <string name="load_image_error">โหลดรูปภาพล้มเหลว</string>
+  <string name="no_more_data">ไม่มีข้อมูลเพิ่มเติม</string>
+  <string name="classify_mingxing">ชื่อเสียง</string>
+  <string name="classify_meinv">ความงาม</string>
+  <string name="classify_fengjing">ทัศนียภาพ</string>
+  <string name="classify_qiche">รถ</string>
+  <string name="classify_dongman">อะนิเมะ</string>
+  <string name="classify_dongwu">สัตว์</string>
+  <string name="classify_zhiwu">พืชพันธุ์</string>
+  <string name="classify_tiyu">กีฬา</string>
+  <string name="classify_meishi">อาหาร</string>
+  <string name="download_success">ดาวน์โหลดความสำเร็จ</string>
+  <string name="contact_me">คำถามใด ๆ กรุณาติดต่อเรา:</string>
+  <string name="version">เวอร์ชัน:</string>
+  <string name="drawer_item_favourite">ภาพที่ชื่นชอบ</string>
+  <string name="drawer_item_feed_back">ฟีดกลับ</string>
+  <string name="drawer_setting">การตั้งค่า</string>
+  <string name="feedback_title">ฉันมีปัญหา</string>
+  <string name="sdcard_permission">คุณควรให้สิทธิ์แก่เราหากคุณต้องการบันทึกภาพนี้ลงใน sdcard</string>
+  <string name="favour_success">ชื่นชอบความสำเร็จ</string>
+  <string name="download_path">เส้นทางการดาวน์โหลด:</string>
+</resources>

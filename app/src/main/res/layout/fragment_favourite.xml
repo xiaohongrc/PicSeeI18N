@@ -20,6 +20,7 @@
             android:layout_height="wrap_content"
             android:drawableLeft="@drawable/load_image_error"
             android:drawableStart="@drawable/load_image_error"
+            android:textSize="18sp"
             android:text="@string/no_more_data" />
 
     </LinearLayout>
