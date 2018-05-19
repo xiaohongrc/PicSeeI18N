@@ -1,9 +1,11 @@
 package com.hongenit.picseei18n.setting
 
 import android.os.Bundle
+import android.view.View
 import com.hongenit.picseei18n.BaseActivity
 import com.hongenit.picseei18n.Constants
 import com.hongenit.picseei18n.R
+import com.hongenit.picseei18n.util.FileUtil
 import kotlinx.android.synthetic.main.activity_setting.*
 
 /**
@@ -16,6 +18,7 @@ class SettingActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_setting)
         tv_download_path.setText(Constants.CACHE_IMAGES.absolutePath)
+
     }
 
 

@@ -36,4 +36,9 @@ public interface Constants {
     String LOCALE_COUNTRY = Locale.getDefault().getCountry();
     @NotNull
     String LOCALE_LANGUAGE = Locale.getDefault().getLanguage();
+
+    long ONE_SECOND = 1000;
+    long ONE_MINUTE = 60 * ONE_SECOND;
+    long ONE_HOUR = 60 * ONE_MINUTE;
+    long ONE_DAY = 24 * ONE_HOUR;
 }

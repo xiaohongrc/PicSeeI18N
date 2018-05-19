@@ -12,17 +12,15 @@ import java.util.concurrent.locks.ReentrantLock
  */
 open abstract class ClassifyResponseListener : ResponseListener() {
     val TAG = "ClassifyResponseListener"
-    override fun onComplete(p1: Response?) {
+    override fun onComplete(responseString: String?) {
 
-        onAnalyzeComplete(AnalyzeResposeData(p1))
+        onAnalyzeComplete(AnalyzeResposeData(responseString))
     }
 
-    private fun AnalyzeResposeData(p1: Response?): ArrayList<ClassifyTypeBean> {
-        val jsonResponse = p1?.body()?.string()
+    private fun AnalyzeResposeData(responseString: String?): ArrayList<ClassifyTypeBean> {
         val resultList = ArrayList<ClassifyTypeBean>()
-        LogUtil.d(TAG, jsonResponse!!)
 
-        val jsonArray = JSONArray(jsonResponse)
+        val jsonArray = JSONArray(responseString)
         val length = jsonArray.length()
         for (i in 0..length - 1) {
             val classifyJson = jsonArray.getJSONObject(i)

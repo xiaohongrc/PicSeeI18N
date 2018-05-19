@@ -1,5 +1,5 @@
 <resources>
-    <string name="feedback_message">Application version : %1$s \n SDK Version : %2$s \n ---------Please do not delete these messages ------- \n</string>
+    <string name="feedback_message">This app version : %1$s \n Android Version : %2$s </string>
     <string name="feedback_email">hongenit@126.com</string>
 
     <!-- need to i18n -->

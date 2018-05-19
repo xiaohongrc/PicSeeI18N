@@ -100,8 +100,8 @@ class DetailsActivity : BaseActivity(), DataModel.FavouriteListChangedListener {
             }
 
         }
-
     }
+
 
     private lateinit var mCardScaleHelper: CardScaleHelper
 
@@ -364,5 +364,9 @@ class DetailsActivity : BaseActivity(), DataModel.FavouriteListChangedListener {
         super.onStop()
     }
 
+
+    override fun onDestroy() {
+        super.onDestroy()
+    }
 
 }

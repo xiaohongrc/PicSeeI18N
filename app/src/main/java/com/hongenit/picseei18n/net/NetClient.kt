@@ -1,5 +1,6 @@
 package com.hongenit.picseei18n.net
 
+import com.hongenit.picseei18n.util.FileUtil
 import okhttp3.*
 import com.hongenit.picseei18n.util.LogUtil
 import java.io.IOException
@@ -21,9 +22,11 @@ class NetClient : INetClient {
             }
 
             override fun onResponse(p0: Call?, p1: Response?) {
-
                 LogUtil.i(TAG, p1.toString())
-                listener.onComplete(p1)
+                val responseString = p1?.body()?.string()
+                listener.onComplete(responseString)
+                // 缓存网络数据
+//                FileUtil.cacheJsonData(request.url().toString(),responseString!!)
             }
         })
     }

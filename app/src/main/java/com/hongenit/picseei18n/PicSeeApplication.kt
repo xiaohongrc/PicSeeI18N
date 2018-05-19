@@ -3,7 +3,6 @@ package com.hongenit.picseei18n
 import android.app.Application
 import android.content.Context
 import android.os.Handler
-import com.google.android.gms.ads.MobileAds
 import com.google.firebase.analytics.FirebaseAnalytics
 import com.umeng.analytics.MobclickAgent
 import com.umeng.commonsdk.UMConfigure

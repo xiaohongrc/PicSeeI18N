@@ -13,9 +13,9 @@ import org.json.JSONArray
  * desc:
  */
 abstract class CommonTabResponsListener : ResponseListener() {
-    override fun onComplete(p1: Response?) {
+    override fun onComplete(jsonString: String?) {
         println("onComplete currenttime = " + System.currentTimeMillis())
-        onAnalyzeComplete(AnalyzeResposeData(p1))
+        onAnalyzeComplete(AnalyzeResposeData(jsonString))
     }
 
 //
@@ -37,12 +37,10 @@ abstract class CommonTabResponsListener : ResponseListener() {
 //    "whichClassify": "明星",
 //    "thumbnailUrl ": "http://pic1.win4000.com/mobile/2018-04-04/5ac478a441168_250_350.jpg"
 
-    private fun AnalyzeResposeData(p1: Response?): ArrayList<AlbumBean> {
+    private fun AnalyzeResposeData(jsonString: String?): ArrayList<AlbumBean> {
         println("AnalyzeResposeData11111 currenttime = " + System.currentTimeMillis())
-        val jsonResponse = p1?.body()?.string()
-        println("AnalyzeResposeData22222222 currenttime = " + System.currentTimeMillis())
         val resultList = ArrayList<AlbumBean>()
-        val jsonArray = JSONArray(jsonResponse)
+        val jsonArray = JSONArray(jsonString)
         val length = jsonArray.length()
         for (i in 0..length - 1) {
             val classifyJson = jsonArray.getJSONObject(i)

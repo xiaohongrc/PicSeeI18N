@@ -8,7 +8,7 @@ import okhttp3.Response
  */
 abstract class ResponseListener {
 
-    abstract fun onComplete(p1: Response?)
+    abstract fun onComplete(jsonString: String?)
 
     abstract fun onError()
 

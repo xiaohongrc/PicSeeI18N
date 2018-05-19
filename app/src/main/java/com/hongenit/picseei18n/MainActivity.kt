@@ -7,9 +7,9 @@ import android.support.v4.widget.DrawerLayout
 import android.view.View
 import com.google.android.gms.ads.MobileAds
 import com.hongenit.picseei18n.favourites.FavouritesActivity
-import com.hongenit.picseei18n.picClassify.StyleClassifyFragment
 import com.hongenit.picseei18n.setting.SettingActivity
 import com.hongenit.picseei18n.util.EventUtil
+import com.hongenit.picseei18n.util.FileUtil
 import com.hongenit.picseei18n.util.LogUtil
 import com.hongenit.picseei18n.util.Utils
 import kotlinx.android.synthetic.main.activity_main.*
@@ -119,6 +119,7 @@ class MainActivity : BaseActivity(), View.OnClickListener {
 
 
     }
+
 
 
 }
