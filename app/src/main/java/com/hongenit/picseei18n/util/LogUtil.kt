@@ -8,11 +8,11 @@ import android.util.Log
  */
 object LogUtil {
 
-    private const val willLog = true
+    private const val willLog = false
 
-    fun temp(message: String){
-        if(willLog){
-            Log.i("LOG------TEMP:",message)
+    fun temp(message: String) {
+        if (willLog) {
+            Log.i("LOG------TEMP:", message)
         }
 
     }
