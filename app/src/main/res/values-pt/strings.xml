@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <resources>
-  <string name="app_name">Papel de parede de beleza sexy</string>
+  <string name="app_name">Papel de parede de beleza</string>
   <string name="msg_get_data_error">Carregar dados falhou</string>
   <string name="load_image_error">Carregar imagem falhou</string>
   <string name="no_more_data">Não há mais dados</string>

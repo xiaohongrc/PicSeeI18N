@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <resources>
-  <string name="app_name">セクシーな美しい壁紙</string>
   <string name="msg_get_data_error">データのロードに失敗しました</string>
   <string name="load_image_error">画像のロードに失敗しました</string>
   <string name="no_more_data">データはこれ以上ありません</string>
@@ -24,4 +23,5 @@
   <string name="sdcard_permission">この画像をsdcardに保存したい場合は、この許可を与える必要があります。</string>
   <string name="favour_success">成功を賞賛する</string>
   <string name="download_path">ダウンロードパス：</string>
+  <string name="app_name">"美容の壁紙 "</string>
 </resources>

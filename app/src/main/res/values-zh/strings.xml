@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <resources>
-  <string name="app_name">性感美女壁紙</string>
+  <string name="app_name">美女壁紙</string>
   <string name="msg_get_data_error">加載數據失敗</string>
   <string name="load_image_error">加載圖片失敗</string>
   <string name="no_more_data">沒有更多的數據</string>

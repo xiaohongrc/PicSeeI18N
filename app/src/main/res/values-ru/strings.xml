@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <resources>
-  <string name="app_name">Cексуальная красота обои</string>
+  <string name="app_name">Красота обои</string>
   <string name="msg_get_data_error">Ошибка загрузки данных</string>
   <string name="load_image_error">Не удалось загрузить изображение</string>
   <string name="no_more_data">Больше нет данных</string>

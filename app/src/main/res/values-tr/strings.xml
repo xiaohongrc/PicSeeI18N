@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <resources>
-  <string name="app_name">Seksi güzellik duvar kağıdı</string>
+  <string name="app_name">Güzellik duvar kağıdı</string>
   <string name="msg_get_data_error">Veri yüklenemedi</string>
   <string name="load_image_error">Resim yüklenemedi</string>
   <string name="no_more_data">Daha fazla veri yok</string>
