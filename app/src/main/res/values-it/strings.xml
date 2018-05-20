@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <resources>
-  <string name="app_name">Carta da parati sexy di bellezza</string>
+  <string name="app_name">Carta da parati di bellezza</string>
   <string name="msg_get_data_error">Caricare i dati falliti</string>
   <string name="load_image_error">Carica immagine fallita</string>
   <string name="no_more_data">Niente più dati</string>

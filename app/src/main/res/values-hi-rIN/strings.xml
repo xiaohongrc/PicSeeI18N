@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <resources>
-  <string name="app_name">सेक्सी सौंदर्य वॉलपेपर</string>
+  <string name="app_name">सौंदर्य वॉलपेपर</string>
   <string name="msg_get_data_error">लोड डेटा असफल रहा</string>
   <string name="load_image_error">लोड तस्वीर असफल रही</string>
   <string name="no_more_data">कोई और डेटा नहीं</string>

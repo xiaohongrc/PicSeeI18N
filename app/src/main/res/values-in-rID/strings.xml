@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <resources>
-  <string name="app_name">Wallpaper kecantikan seksi</string>
+  <string name="app_name">Wallpaper kecantikan</string>
   <string name="msg_get_data_error">Muat data gagal</string>
   <string name="load_image_error">Gagal memuat gambar</string>
   <string name="no_more_data">Tidak ada lagi data</string>

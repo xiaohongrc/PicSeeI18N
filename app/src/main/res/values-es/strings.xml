@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <resources>
-  <string name="app_name">Fondo de pantalla de belleza sexy</string>
+  <string name="app_name">Papel pintado de belleza</string>
   <string name="msg_get_data_error">Datos de carga fallidos</string>
   <string name="load_image_error">Cargar imagen fallida</string>
   <string name="no_more_data">No más datos</string>

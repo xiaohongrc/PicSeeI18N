@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <resources>
-  <string name="app_name">섹시한 아름다움 벽지</string>
+  <string name="app_name">아름다움 벽지</string>
   <string name="msg_get_data_error">데이터로드 실패</string>
   <string name="load_image_error">그림로드 실패</string>
   <string name="no_more_data">데이터가 더 이상 없음</string>

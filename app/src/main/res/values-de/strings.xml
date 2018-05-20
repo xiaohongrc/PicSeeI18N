@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <resources>
-  <string name="app_name">Sexy Schönheit Tapete</string>
+  <string name="app_name">Schönheit Tapete</string>
   <string name="msg_get_data_error">Ladedaten fehlgeschlagen</string>
   <string name="load_image_error">Bild laden fehlgeschlagen</string>
   <string name="no_more_data">Keine weiteren Daten</string>

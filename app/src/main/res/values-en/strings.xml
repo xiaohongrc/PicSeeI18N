@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <resources>
-  <string name="app_name">Sexy beauty wallpaper</string>
+  <string name="app_name">Beauty wallpaper</string>
   <string name="msg_get_data_error">Load data failed</string>
   <string name="load_image_error">Load picture failed</string>
   <string name="no_more_data">No more data</string>
